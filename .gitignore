@@ -1,0 +1,48 @@
+# compiled source #
+###################
+*.a
+*.d
+*.dll
+*.lib
+*.o
+*.obj
+*.so
+
+# Code::Blocks temp files #
+###########################
+*.depend
+*.layout
+
+# Visual Studio temp files #
+############################
+*.db
+*.idb
+*.ilk
+*.iobj
+*.ipch
+*.ipdb
+*.lastbuildstate
+*.opendb
+*.pdb
+*.res
+*.suo
+*.tlog
+
+# doxygen generated files #
+###########################
+*.log
+docs/html/*
+
+# generated resources #
+#######################
+build/codeblocks/debug/res/*
+build/codeblocks/release/res/*
+build/msvc/Debug/res/*
+build/msvc/Release/res/*
+res/resources.cc
+
+# generated executables #
+######################################
+*.exe
+build/codeblocks/debug/OnSag
+build/codeblocks/release/OnSag
