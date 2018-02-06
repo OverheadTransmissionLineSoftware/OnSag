@@ -1,0 +1,9 @@
+[submodule "external/AppCommon"]
+	path = external/AppCommon
+	url = https://github.com/OverheadTransmissionLineSoftware/AppCommon.git
+[submodule "external/Models"]
+	path = external/Models
+	url = https://github.com/OverheadTransmissionLineSoftware/Models.git
+[submodule "external/wxWidgets"]
+	path = external/wxWidgets
+	url = https://github.com/wxWidgets/wxWidgets.git
