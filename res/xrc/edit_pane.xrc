@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource version="2.5.3.0">
+  <object class="wxPanel" name="edit_pane">
+    <style>wxTAB_TRAVERSAL</style>
+    <object class="wxBoxSizer">
+      <orient>wxVERTICAL</orient>
+      <object class="sizeritem">
+        <option>0</option>
+        <flag>wxEXPAND|wxALL</flag>
+        <border>0</border>
+        <object class="wxBoxSizer">
+          <orient>wxHORIZONTAL</orient>
+          <object class="sizeritem">
+            <option>0</option>
+            <flag>wxEXPAND|wxALL</flag>
+            <border>0</border>
+            <object class="wxButton" name="button_add">
+              <size>32,32</size>
+              <tooltip>Add</tooltip>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <option>0</option>
+            <flag>wxEXPAND|wxALL</flag>
+            <border>0</border>
+            <object class="wxButton" name="button_delete">
+              <size>32,32</size>
+              <tooltip>Delete</tooltip>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <option>0</option>
+            <flag>wxEXPAND|wxALL</flag>
+            <border>0</border>
+            <object class="wxButton" name="button_copy">
+              <size>32,32</size>
+              <tooltip>Copy</tooltip>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <option>0</option>
+            <flag>wxEXPAND|wxALL</flag>
+            <border>0</border>
+            <object class="wxButton" name="button_edit">
+              <size>32,32</size>
+              <tooltip>Edit</tooltip>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <option>0</option>
+            <flag>wxEXPAND|wxALL</flag>
+            <border>0</border>
+            <object class="wxButton" name="button_move_up">
+              <size>32,32</size>
+              <tooltip>Move Up</tooltip>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <option>0</option>
+            <flag>wxEXPAND|wxALL</flag>
+            <border>0</border>
+            <object class="wxButton" name="button_move_down">
+              <size>32,32</size>
+              <tooltip>Move Down</tooltip>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object class="sizeritem">
+        <option>1</option>
+        <flag>wxEXPAND|wxALL</flag>
+        <border>0</border>
+        <object class="wxTreeCtrl" name="treectrl">
+          <style>wxTR_DEFAULT_STYLE|wxTR_HAS_BUTTONS</style>
+        </object>
+      </object>
+    </object>
+  </object>
+</resource>
