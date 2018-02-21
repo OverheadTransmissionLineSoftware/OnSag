@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{0F0992D2-E723-4D70-9C47-E9DBE1F0E2BD}</ProjectGuid>
+    <RootNamespace>OnSag</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\$(Configuration)\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\$(Configuration)\obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\include;..\..\external\AppCommon\include;..\..\external\AppCommon\res;..\..\external\Models\include;..\..\external\wxWidgets\include;..\..\external\wxWidgets\include\msvc;..\..\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_DEPRECATE=1;_CRT_NON_CONFORMING_SWPRINTFS=1;_SCL_SECURE_NO_WARNINGS=1;__WXMSW__;_UNICODE;_WINDOWS;NOPCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\..\external\wxWidgets\lib\vc_x64_lib;..\..\external\Models\build\msvc\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>otlsmodels_based.lib;otlsmodels_saggingd.lib;otlsmodels_transmissionlined.lib;wxbase31ud.lib;wxbase31ud_net.lib;wxbase31ud_xml.lib;wxexpatd.lib;wxjpegd.lib;wxmsw31ud_adv.lib;wxmsw31ud_core.lib;wxmsw31ud_xrc.lib;wxpngd.lib;wxregexud.lib;wxscintillad.lib;wxtiffd.lib;wxzlibd.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;shlwapi.lib;comctl32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;version.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>..\..\external\wxWidgets\utils\wxrc\vc_mswud_x64\wxrc.exe -v -c -o=..\..\res\resources.cc ..\..\external\AppCommon\res\xrc\error_message_dialog.xrc ..\..\res\xrc\edit_pane.xrc ..\..\res\xrc\on_sag_menubar.xrc ..\..\res/xrc\plan_plot_options_dialog.xrc ..\..\res\xrc\profile_plot_options_dialog.xrc ..\..\res\xrc\preferences_dialog.xrc ..\..\res\xrc\sag_span_editor_dialog.xrc</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\include;..\..\external\AppCommon\include;..\..\external\AppCommon\res;..\..\external\Models\include;..\..\external\wxWidgets\include;..\..\external\wxWidgets\include\msvc;..\..\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE=1;_CRT_NON_CONFORMING_SWPRINTFS=1;_SCL_SECURE_NO_WARNINGS=1;__WXMSW__;NDEBUG;_UNICODE;_WINDOWS;NOPCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\external\wxWidgets\lib\vc_x64_lib;..\..\external\Models\build\msvc\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>otlsmodels_base.lib;otlsmodels_sagging.lib;otlsmodels_transmissionline.lib;wxbase31u.lib;wxbase31u_net.lib;wxbase31u_xml.lib;wxexpat.lib;wxjpeg.lib;wxmsw31u_adv.lib;wxmsw31u_core.lib;wxmsw31u_xrc.lib;wxpng.lib;wxregexu.lib;wxscintilla.lib;wxtiff.lib;wxzlib.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;shlwapi.lib;comctl32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;version.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>..\..\external\wxWidgets\utils\wxrc\vc_mswu_x64\wxrc.exe -v -c -o=..\..\res\resources.cc ..\..\external\AppCommon\res\xrc\error_message_dialog.xrc ..\..\res\xrc\edit_pane.xrc ..\..\res\xrc\on_sag_menubar.xrc ..\..\res/xrc\plan_plot_options_dialog.xrc ..\..\res\xrc\profile_plot_options_dialog.xrc ..\..\res\xrc\preferences_dialog.xrc ..\..\res\xrc\sag_span_editor_dialog.xrc</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\data_set_2d.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\line_data_set_2d.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\line_renderer_2d.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\plot_2d.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\plot_axis.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\plot_pane_2d.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\renderer_2d.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\text_data_set_2d.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\text_renderer_2d.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\widgets\error_message_dialog.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\widgets\log_pane.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\widgets\report_table.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\widgets\status_bar_log.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\widgets\timer.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\xml\color_xml_handler.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\xml\point_xml_handler.h" />
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\xml\xml_handler.h" />
+    <ClInclude Include="..\..\include\analysis_controller.h" />
+    <ClInclude Include="..\..\include\edit_pane.h" />
+    <ClInclude Include="..\..\include\file_handler.h" />
+    <ClInclude Include="..\..\include\on_sag_app.h" />
+    <ClInclude Include="..\..\include\on_sag_config.h" />
+    <ClInclude Include="..\..\include\on_sag_config_xml_handler.h" />
+    <ClInclude Include="..\..\include\on_sag_doc.h" />
+    <ClInclude Include="..\..\include\on_sag_doc_commands.h" />
+    <ClInclude Include="..\..\include\on_sag_doc_xml_handler.h" />
+    <ClInclude Include="..\..\include\on_sag_frame.h" />
+    <ClInclude Include="..\..\include\on_sag_view.h" />
+    <ClInclude Include="..\..\include\preferences_dialog.h" />
+    <ClInclude Include="..\..\include\profile_plot_pane.h" />
+    <ClInclude Include="..\..\include\results_pane.h" />
+    <ClInclude Include="..\..\include\sagging_analysis_result.h" />
+    <ClInclude Include="..\..\include\sag_cable.h" />
+    <ClInclude Include="..\..\include\sag_cable_unit_converter.h" />
+    <ClInclude Include="..\..\include\sag_cable_xml_handler.h" />
+    <ClInclude Include="..\..\include\sag_method.h" />
+    <ClInclude Include="..\..\include\sag_method_unit_converter.h" />
+    <ClInclude Include="..\..\include\sag_method_xml_handler.h" />
+    <ClInclude Include="..\..\include\sag_span.h" />
+    <ClInclude Include="..\..\include\sag_span_editor_dialog.h" />
+    <ClInclude Include="..\..\include\sag_span_unit_converter.h" />
+    <ClInclude Include="..\..\include\sag_span_xml_handler.h" />
+    <ClInclude Include="..\..\include\sag_structure.h" />
+    <ClInclude Include="..\..\include\sag_structure_unit_converter.h" />
+    <ClInclude Include="..\..\include\sag_structure_xml_handler.h" />
+    <ClInclude Include="..\..\include\span_sagger.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\external\AppCommon\res\xpm\sort_arrow_down.xpm" />
+    <None Include="..\..\external\AppCommon\res\xpm\sort_arrow_up.xpm" />
+    <None Include="..\..\external\AppCommon\res\xrc\error_message_dialog.xrc" />
+    <None Include="..\..\res\xpm\copy.xpm" />
+    <None Include="..\..\res\xpm\icon.xpm" />
+    <None Include="..\..\res\xpm\minus.xpm" />
+    <None Include="..\..\res\xpm\move_arrow_down.xpm" />
+    <None Include="..\..\res\xpm\move_arrow_up.xpm" />
+    <None Include="..\..\res\xpm\plus.xpm" />
+    <None Include="..\..\res\xpm\wrench.xpm" />
+    <None Include="..\..\res\xrc\edit_pane.xrc" />
+    <None Include="..\..\res\xrc\on_sag_menubar.xrc" />
+    <None Include="..\..\res\xrc\preferences_dialog.xrc" />
+    <None Include="..\..\res\xrc\sag_span_editor_dialog.xrc" />
+    <None Include="..\..\test\onsag.conf" />
+    <None Include="..\..\test\test.onsag" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\data_set_2d.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\line_data_set_2d.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\line_renderer_2d.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\plot_2d.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\plot_axis.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\plot_pane_2d.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\renderer_2d.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\text_data_set_2d.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\text_renderer_2d.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\widgets\error_message_dialog.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\widgets\log_pane.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\widgets\report_table.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\widgets\status_bar_log.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\widgets\timer.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\xml\color_xml_handler.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\xml\point_xml_handler.cc" />
+    <ClCompile Include="..\..\external\AppCommon\src\xml\xml_handler.cc" />
+    <ClCompile Include="..\..\res\resources.cc" />
+    <ClCompile Include="..\..\src\analysis_controller.cc" />
+    <ClCompile Include="..\..\src\edit_pane.cc" />
+    <ClCompile Include="..\..\src\file_handler.cc" />
+    <ClCompile Include="..\..\src\on_sag_app.cc" />
+    <ClCompile Include="..\..\src\on_sag_config_xml_handler.cc" />
+    <ClCompile Include="..\..\src\on_sag_doc.cc" />
+    <ClCompile Include="..\..\src\on_sag_doc_commands.cc" />
+    <ClCompile Include="..\..\src\on_sag_doc_xml_handler.cc" />
+    <ClCompile Include="..\..\src\on_sag_frame.cc" />
+    <ClCompile Include="..\..\src\on_sag_view.cc" />
+    <ClCompile Include="..\..\src\preferences_dialog.cc" />
+    <ClCompile Include="..\..\src\profile_plot_pane.cc" />
+    <ClCompile Include="..\..\src\results_pane.cc" />
+    <ClCompile Include="..\..\src\sag_cable.cc" />
+    <ClCompile Include="..\..\src\sag_cable_unit_converter.cc" />
+    <ClCompile Include="..\..\src\sag_cable_xml_handler.cc" />
+    <ClCompile Include="..\..\src\sag_method.cc" />
+    <ClCompile Include="..\..\src\sag_method_unit_converter.cc" />
+    <ClCompile Include="..\..\src\sag_method_xml_handler.cc" />
+    <ClCompile Include="..\..\src\sag_span.cc" />
+    <ClCompile Include="..\..\src\sag_span_editor_dialog.cc" />
+    <ClCompile Include="..\..\src\sag_span_unit_converter.cc" />
+    <ClCompile Include="..\..\src\sag_span_xml_handler.cc" />
+    <ClCompile Include="..\..\src\sag_structure.cc" />
+    <ClCompile Include="..\..\src\sag_structure_unit_converter.cc" />
+    <ClCompile Include="..\..\src\sag_structure_xml_handler.cc" />
+    <ClCompile Include="..\..\src\span_sagger.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\res\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\res\onsag.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

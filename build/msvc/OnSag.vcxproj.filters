@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common Header Files">
+      <UniqueIdentifier>{68757bf0-235d-4943-bb6c-43a166221869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Source Files">
+      <UniqueIdentifier>{23771933-7c51-4299-90b1-35f489b539a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Resource Files">
+      <UniqueIdentifier>{5938476d-3c0f-4a1f-9007-e425507fa318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Resource Files\XPM">
+      <UniqueIdentifier>{5f7ddb86-a026-40d3-95aa-3cc3129808f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Resource Files\XRC">
+      <UniqueIdentifier>{55408576-140c-4fca-9a1f-0646fc701802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\XPM">
+      <UniqueIdentifier>{3ca3d4ac-9563-460a-a2b3-c3e68b1fb71b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\XRC">
+      <UniqueIdentifier>{0afd40a9-1118-4068-8daa-33eb9ee043eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{16473afd-d473-4f6d-9176-a9e95a1f1872}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\data_set_2d.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\line_data_set_2d.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\line_renderer_2d.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\plot_2d.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\plot_axis.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\plot_pane_2d.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\renderer_2d.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\text_data_set_2d.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\text_renderer_2d.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\widgets\error_message_dialog.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\widgets\log_pane.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\widgets\report_table.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\widgets\status_bar_log.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\widgets\timer.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\xml\color_xml_handler.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\xml\point_xml_handler.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\AppCommon\include\appcommon\xml\xml_handler.h">
+      <Filter>Common Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\analysis_controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\edit_pane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\file_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\on_sag_app.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\on_sag_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\on_sag_config_xml_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\on_sag_doc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\on_sag_doc_commands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\on_sag_doc_xml_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\on_sag_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\on_sag_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\preferences_dialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\profile_plot_pane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\results_pane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_cable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_cable_unit_converter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_cable_xml_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_method.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_method_unit_converter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_method_xml_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_span.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_span_editor_dialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_span_unit_converter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_span_xml_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_structure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_structure_unit_converter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sag_structure_xml_handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\sagging_analysis_result.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\span_sagger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\external\AppCommon\res\xpm\sort_arrow_down.xpm">
+      <Filter>Common Resource Files\XPM</Filter>
+    </None>
+    <None Include="..\..\external\AppCommon\res\xpm\sort_arrow_up.xpm">
+      <Filter>Common Resource Files\XPM</Filter>
+    </None>
+    <None Include="..\..\external\AppCommon\res\xrc\error_message_dialog.xrc">
+      <Filter>Common Resource Files\XRC</Filter>
+    </None>
+    <None Include="..\..\res\xpm\copy.xpm">
+      <Filter>Resource Files\XPM</Filter>
+    </None>
+    <None Include="..\..\res\xpm\icon.xpm">
+      <Filter>Resource Files\XPM</Filter>
+    </None>
+    <None Include="..\..\res\xpm\minus.xpm">
+      <Filter>Resource Files\XPM</Filter>
+    </None>
+    <None Include="..\..\res\xpm\move_arrow_down.xpm">
+      <Filter>Resource Files\XPM</Filter>
+    </None>
+    <None Include="..\..\res\xpm\move_arrow_up.xpm">
+      <Filter>Resource Files\XPM</Filter>
+    </None>
+    <None Include="..\..\res\xpm\plus.xpm">
+      <Filter>Resource Files\XPM</Filter>
+    </None>
+    <None Include="..\..\res\xpm\wrench.xpm">
+      <Filter>Resource Files\XPM</Filter>
+    </None>
+    <None Include="..\..\res\xrc\edit_pane.xrc">
+      <Filter>Resource Files\XRC</Filter>
+    </None>
+    <None Include="..\..\res\xrc\on_sag_menubar.xrc">
+      <Filter>Resource Files\XRC</Filter>
+    </None>
+    <None Include="..\..\res\xrc\preferences_dialog.xrc">
+      <Filter>Resource Files\XRC</Filter>
+    </None>
+    <None Include="..\..\res\xrc\sag_span_editor_dialog.xrc">
+      <Filter>Resource Files\XRC</Filter>
+    </None>
+    <None Include="..\..\test\onsag.conf">
+      <Filter>Test</Filter>
+    </None>
+    <None Include="..\..\test\test.onsag">
+      <Filter>Test</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\data_set_2d.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\line_data_set_2d.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\line_renderer_2d.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\plot_2d.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\plot_axis.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\plot_pane_2d.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\renderer_2d.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\text_data_set_2d.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\graphics\text_renderer_2d.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\widgets\error_message_dialog.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\widgets\log_pane.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\widgets\report_table.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\widgets\status_bar_log.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\widgets\timer.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\xml\color_xml_handler.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\xml\point_xml_handler.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\AppCommon\src\xml\xml_handler.cc">
+      <Filter>Common Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\analysis_controller.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\edit_pane.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\file_handler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\on_sag_app.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\on_sag_config_xml_handler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\on_sag_doc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\on_sag_doc_commands.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\on_sag_doc_xml_handler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\on_sag_frame.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\on_sag_view.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\preferences_dialog.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\profile_plot_pane.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\results_pane.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_cable.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_cable_unit_converter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_cable_xml_handler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_method.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_method_unit_converter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_method_xml_handler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_span.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_span_editor_dialog.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_span_unit_converter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_span_xml_handler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_structure.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_structure_unit_converter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sag_structure_xml_handler.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\span_sagger.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\res\resources.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\res\icon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\res\onsag.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
