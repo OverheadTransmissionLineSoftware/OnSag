@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<on_sag_doc version="1" units="Imperial">
+  <sag_spans>
+    <sag_span version="1">
+      <description>New</description>
+      <sag_cable version="1">
+        <name>ACSR Drake</name>
+        <weight_unit units="lb/ft">1.093</weight_unit>
+        <tensions>
+          <tension_point>
+            <temperature units="deg F">0</temperature>
+            <tension_horizontal units="lbs">5000</tension_horizontal>
+          </tension_point>
+          <tension_point>
+            <temperature units="deg F">30</temperature>
+            <tension_horizontal units="lbs">4000</tension_horizontal>
+          </tension_point>
+          <tension_point>
+            <temperature units="deg F">60</temperature>
+            <tension_horizontal units="lbs">3000</tension_horizontal>
+          </tension_point>
+          <tension_point>
+            <temperature units="deg F">90</temperature>
+            <tension_horizontal units="lbs">2000</tension_horizontal>
+          </tension_point>
+          <tension_point>
+            <temperature units="deg F">120</temperature>
+            <tension_horizontal units="lbs">1000</tension_horizontal>
+          </tension_point>
+        </tensions>
+        <correction_creep units="deg F">0.0</correction_creep>
+        <correction_sag units="in">0.0</correction_sag>
+        <scale>1.00</scale>
+      </sag_cable>
+      <sag_structure version="1" name="back">
+        <name>1/1</name>
+        <attachment>Center</attachment>
+        <point_2d version="1" name="position_attachment">0.00,100.00</point_2d>
+      </sag_structure>
+      <sag_structure version="1" name="ahead">
+        <name>1/2</name>
+        <attachment>Center</attachment>
+        <point_2d version="1" name="position_attachment">1200.00,150.00</point_2d>
+      </sag_structure>
+      <sag_method version="1">
+        <type>transit</type>
+        <end>ahead</end>
+        <point_2d version="1" name="point_transit">0.00,25.00</point_2d>
+        <wave_return>5</wave_return>
+      </sag_method>
+      <temperature_base units="deg F">60.0</temperature_base>
+      <temperature_interval units="deg F">5.0</temperature_interval>
+      <notes></notes>
+    </sag_span>
+  </sag_spans>
+</on_sag_doc>
