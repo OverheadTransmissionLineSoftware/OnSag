@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource version="2.5.3.0">
+	<object class="wxDialog" name="sag_span_editor_dialog">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<exstyle>wxWS_EX_VALIDATE_RECURSIVELY</exstyle>
+		<title>Sag Span Editor</title>
+    <object class="wxPanel" name="panel">
+      <style>wxTAB_TRAVERSAL</style>
+      <object class="wxBoxSizer">
+        <orient>wxVERTICAL</orient>
+        <object class="sizeritem">
+          <option>0</option>
+          <flag>wxEXPAND</flag>
+          <border>0</border>
+          <object class="wxBoxSizer">
+            <orient>wxHORIZONTAL</orient>
+            <object class="sizeritem">
+              <option>0</option>
+              <flag>wxALL</flag>
+              <border>5</border>
+              <object class="wxStaticText" name="statictext_description">
+                <label>Description</label>
+              </object>
+            </object>
+            <object class="sizeritem">
+              <option>0</option>
+              <flag>wxALL</flag>
+              <border>5</border>
+              <object class="wxTextCtrl" name="textctrl_description">
+                <size>300,-1</size>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object class="sizeritem">
+          <option>0</option>
+          <flag>wxEXPAND</flag>
+          <border>0</border>
+          <object class="wxNotebook" name="notebook">
+            <style>wxBK_TOP</style>
+            <object class="notebookpage" name="page_cable">
+              <label>Cable</label>
+              <object class="wxPanel" name="panel_cable">
+                <style>wxTAB_TRAVERSAL</style>
+                <object class="wxBoxSizer">
+                  <orient>wxVERTICAL</orient>
+                  <object class="sizeritem">
+                    <option>0</option>
+                    <flag>wxTOP</flag>
+                    <border>5</border>
+                    <object class="wxFlexGridSizer">
+                      <rows>2</rows>
+                      <cols>3</cols>
+                      <vgap>0</vgap>
+                      <hgap>0</hgap>
+                      <flexibledirection>wxHORIZONTAL</flexibledirection>
+                      <growablecols></growablecols>
+                      <growablerows></growablerows>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxLEFT</flag>
+                        <border>10</border>
+                        <object class="wxStaticText" name="statictext_cable_name">
+                          <label>Name</label>
+                        </object>
+                      </object>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxLEFT|wxRIGHT</flag>
+                        <border>10</border>
+                        <object class="wxStaticText" name="statictext_cable_name_units">
+                          <label></label>
+                        </object>
+                      </object>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag></flag>
+                        <border>0</border>
+                        <object class="wxTextCtrl" name="textctrl_cable_name">
+                          <size>225,-1</size>
+                          <value></value>
+                          <maxlength>0</maxlength>
+                          <tooltip>The cable name.</tooltip>
+                        </object>
+                      </object>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxLEFT</flag>
+                        <border>10</border>
+                        <object class="wxStaticText" name="statictext_cable_weight">
+                          <label>Unit Weight</label>
+                        </object>
+                      </object>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxLEFT|wxRIGHT</flag>
+                        <border>10</border>
+                        <object class="wxStaticText" name="statictext_cable_weight_units">
+                          <label>WWW</label>
+                        </object>
+                      </object>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag></flag>
+                        <border>0</border>
+                        <object class="wxTextCtrl" name="textctrl_cable_weight">
+                          <size>75,-1</size>
+                          <value></value>
+                          <maxlength>0</maxlength>
+                          <tooltip>The weight per unit length of cable.</tooltip>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                  <object class="sizeritem">
+                    <option>0</option>
+                    <flag>wxEXPAND</flag>
+                    <border>0</border>
+                    <object class="wxStaticBoxSizer">
+                      <orient>wxVERTICAL</orient>
+                      <label>Tension</label>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALL</flag>
+                        <border>5</border>
+                        <object class="wxFlexGridSizer">
+                          <rows>7</rows>
+                          <cols>2</cols>
+                          <vgap>0</vgap>
+                          <hgap>0</hgap>
+                          <flexibledirection>wxBOTH</flexibledirection>
+                          <growablecols></growablecols>
+                          <growablerows></growablerows>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_cable_temperature">
+                              <label>Temperature</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_cable_tension">
+                              <label>Horizontal Tension</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER</flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_cable_temperature_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER</flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_cable_tension_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_temperature_1">
+                              <size>75,-1</size>
+                              <tooltip>Point #1 cable temperature.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_tension_1">
+                              <size>75,-1</size>
+                              <tooltip>Point #1 horizontal tension.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_temperature_2">
+                              <size>75,-1</size>
+                              <tooltip>Point #2 cable temperature.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_tension_2">
+                              <size>75,-1</size>
+                              <tooltip>Point #2 horizontal tension.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_temperature_3">
+                              <size>75,-1</size>
+                              <tooltip>Point #3 cable temperature.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_tension_3">
+                              <size>75,-1</size>
+                              <tooltip>Point #3 horizontal tension.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_temperature_4">
+                              <size>75,-1</size>
+                              <tooltip>Point #4 cable temperature.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_tension_4">
+                              <size>75,-1</size>
+                              <tooltip>Point #4 horizontal tension.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_temperature_5">
+                              <size>75,-1</size>
+                              <tooltip>Point #5 cable temperature.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_tension_5">
+                              <size>75,-1</size>
+                              <tooltip>Point #5 horizontal tension.</tooltip>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                  <object class="sizeritem">
+                    <option>0</option>
+                    <flag>wxEXPAND</flag>
+                    <border>0</border>
+                    <object class="wxStaticBoxSizer">
+                      <orient>wxVERTICAL</orient>
+                      <label>Corrections</label>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALL</flag>
+                        <border>5</border>
+                        <object class="wxFlexGridSizer">
+                          <rows>3</rows>
+                          <cols>3</cols>
+                          <vgap>0</vgap>
+                          <hgap>0</hgap>
+                          <flexibledirection>wxHORIZONTAL</flexibledirection>
+                          <growablecols></growablecols>
+                          <growablerows></growablerows>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_correction_creep">
+                              <label>Creep</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_correction_creep_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_correction_creep">
+                              <size>75,-1</size>
+                              <tooltip>The creep correction. This adjusts the cable tension to account for long-term permanent elongation.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_correction_sag">
+                              <label>Sag</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_correction_sag_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_correction_sag">
+                              <size>75,-1</size>
+                              <tooltip>The sag correction. This adjusts the cable sag to account for being suspended in travelers.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_scaling">
+                              <label>Scale Factor</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_scale_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_scale">
+                              <size>75,-1</size>
+                              <tooltip>The scaling factor. This adjusts the cable tension for pre-stressing. For regular sagging tensions, 1.0 should be used.</tooltip>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+              </object>
+            </object>
+            <object class="notebookpage" name="page_structures">
+              <label>Structures</label>
+              <object class="wxPanel" name="panel_structures">
+                <style>wxTAB_TRAVERSAL</style>
+                <object class="wxBoxSizer">
+                  <orient>wxHORIZONTAL</orient>
+                  <object class="sizeritem">
+                    <option>1</option>
+                    <flag>wxTOP</flag>
+                    <border>5</border>
+                    <object class="wxStaticBoxSizer">
+                      <orient>wxVERTICAL</orient>
+                      <label>Back-on-Line</label>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALL</flag>
+                        <border>5</border>
+                        <object class="wxFlexGridSizer">
+                          <rows>2</rows>
+                          <cols>2</cols>
+                          <vgap>0</vgap>
+                          <hgap>0</hgap>
+                          <flexibledirection>wxHORIZONTAL</flexibledirection>
+                          <growablecols></growablecols>
+                          <growablerows></growablerows>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_back_structure">
+                              <label>Structure</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER</flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_back_structure">
+                              <size>75,-1</size>
+                              <tooltip>The back-on-line structure description.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_back_attachment">
+                              <label>Attachment</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_back_attachment">
+                              <size>75,-1</size>
+                              <tooltip>The back-on-line attachment description.</tooltip>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALL</flag>
+                        <border>5</border>
+                        <object class="wxFlexGridSizer">
+                          <rows>3</rows>
+                          <cols>3</cols>
+                          <vgap>0</vgap>
+                          <hgap>0</hgap>
+                          <flexibledirection>wxHORIZONTAL</flexibledirection>
+                          <growablecols></growablecols>
+                          <growablerows></growablerows>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_back_x">
+                              <label>X</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_back_x_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_back_x">
+                              <size>75,-1</size>
+                              <tooltip>The back-on-line attachment x-coordinate.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_back_y">
+                              <label>Y</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_back_y_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_back_y">
+                              <size>75,-1</size>
+                              <tooltip>The back-on-line attachment y-coordinate.</tooltip>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                  <object class="sizeritem">
+                    <option>1</option>
+                    <flag>wxTOP</flag>
+                    <border>5</border>
+                    <object class="wxStaticBoxSizer">
+                      <orient>wxVERTICAL</orient>
+                      <label>Ahead-on-Line</label>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALL</flag>
+                        <border>5</border>
+                        <object class="wxFlexGridSizer">
+                          <rows>2</rows>
+                          <cols>2</cols>
+                          <vgap>0</vgap>
+                          <hgap>0</hgap>
+                          <flexibledirection>wxHORIZONTAL</flexibledirection>
+                          <growablecols></growablecols>
+                          <growablerows></growablerows>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_ahead_structure">
+                              <label>Structure</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_ahead_structure">
+                              <size>75,-1</size>
+                              <tooltip>The ahead-on-line structure description.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_ahead_attachment">
+                              <label>Attachment</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_ahead_attachment">
+                              <size>75,-1</size>
+                              <tooltip>The ahead-on-line attachment description.</tooltip>
+                           </object>
+                          </object>
+                        </object>
+                      </object>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALL</flag>
+                        <border>5</border>
+                        <object class="wxFlexGridSizer">
+                          <rows>3</rows>
+                          <cols>3</cols>
+                          <vgap>0</vgap>
+                          <hgap>0</hgap>
+                          <flexibledirection>wxHORIZONTAL</flexibledirection>
+                          <growablecols></growablecols>
+                          <growablerows></growablerows>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_ahead_x">
+                              <label>X</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_ahead_x_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_ahead_x">
+                              <size>75,-1</size>
+                              <tooltip>The ahead-on-line attachment x-coordinate.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_ahead_y">
+                              <label>Y</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_ahead_y_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_ahead_y">
+                              <size>75,-1</size>
+                              <tooltip>The ahead-on-line attachment y-coordinate.</tooltip>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+              </object>
+            </object>
+            <object class="notebookpage" name="page_sagging">
+              <label>Sagging</label>
+              <object class="wxPanel" name="panel_sagging">
+                <style>wxTAB_TRAVERSAL</style>
+                <object class="wxBoxSizer">
+                  <orient>wxVERTICAL</orient>
+                  <object class="sizeritem">
+                    <option>0</option>
+                    <flag>wxEXPAND|wxTOP</flag>
+                    <border>5</border>
+                    <object class="wxStaticBoxSizer">
+                      <orient>wxVERTICAL</orient>
+                      <label>Method</label>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag></flag>
+                        <border>0</border>
+                        <object class="wxFlexGridSizer">
+                          <rows>3</rows>
+                          <cols>2</cols>
+                          <vgap>0</vgap>
+                          <hgap>0</hgap>
+                          <flexibledirection>wxBOTH</flexibledirection>
+                          <growablecols></growablecols>
+                          <growablerows></growablerows>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER</flag>
+                            <border>0</border>
+                            <object class="wxRadioButton" name="radiobutton_transit">
+                              <label></label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxEXPAND</flag>
+                            <border>0</border>
+                            <object class="wxStaticBoxSizer">
+                              <orient>wxVERTICAL</orient>
+                              <label>Transit</label>
+                              <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxALL</flag>
+                                <border>5</border>
+                                <object class="wxFlexGridSizer">
+                                  <rows>2</rows>
+                                  <cols>3</cols>
+                                  <vgap>0</vgap>
+                                  <hgap>0</hgap>
+                                  <flexibledirection>wxHORIZONTAL</flexibledirection>
+                                  <growablecols></growablecols>
+                                  <growablerows></growablerows>
+                                  <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag></flag>
+                                    <border>0</border>
+                                    <object class="wxStaticText" name="statictext_transit_x">
+                                      <label>X</label>
+                                    </object>
+                                  </object>
+                                  <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag>wxLEFT|wxRIGHT</flag>
+                                    <border>10</border>
+                                    <object class="wxStaticText" name="statictext_transit_x_units">
+                                      <label>WWW</label>
+                                    </object>
+                                  </object>
+                                  <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag></flag>
+                                    <border>0</border>
+                                    <object class="wxTextCtrl" name="textctrl_transit_x">
+                                      <size>75,-1</size>
+                                      <tooltip>The transit x-coordinate.</tooltip>
+                                    </object>
+                                  </object>
+                                  <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag></flag>
+                                    <border>0</border>
+                                    <object class="wxStaticText" name="statictext_transit_y">
+                                      <label>Y</label>
+                                    </object>
+                                  </object>
+                                  <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag>wxLEFT|wxRIGHT</flag>
+                                    <border>10</border>
+                                    <object class="wxStaticText" name="statictext_transit_y_units">
+                                      <label>WWW</label>
+                                    </object>
+                                  </object>
+                                  <object class="sizeritem">
+                                    <option>0</option>
+                                    <flag></flag>
+                                    <border>0</border>
+                                    <object class="wxTextCtrl" name="textctrl_transit_y">
+                                      <size>75,-1</size>
+                                      <tooltip>The transit y-coordinate.</tooltip>
+                                    </object>
+                                  </object>
+                                </object>
+                              </object>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER</flag>
+                            <border>0</border>
+                            <object class="wxRadioButton" name="radiobutton_dynamometer">
+                              <label></label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxEXPAND</flag>
+                            <border>0</border>
+                            <object class="wxStaticBoxSizer">
+                              <orient>wxVERTICAL</orient>
+                              <label>Dynamometer</label>
+                              <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxALL</flag>
+                                <border>5</border>
+                                <object class="wxRadioButton" name="radiobutton_structure_back">
+                                  <label>Back Structure</label>
+                                </object>
+                              </object>
+                              <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxBOTTOM|wxLEFT|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxRadioButton" name="radiobutton_structure_ahead">
+                                  <label>Ahead Structure</label>
+                                </object>
+                              </object>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxALIGN_CENTER</flag>
+                            <border>0</border>
+                            <object class="wxRadioButton" name="radiobutton_stopwatch">
+                              <label></label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxEXPAND</flag>
+                            <border>0</border>
+                            <object class="wxStaticBoxSizer">
+                              <orient>wxHORIZONTAL</orient>
+                              <label>Stopwatch</label>
+                              <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxLEFT</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="statictext_wave_return">
+                                  <label>Return Wave</label>
+                                </object>
+                              </object>
+                              <object class="sizeritem">
+                                <option>0</option>
+                                <flag>wxLEFT</flag>
+                                <border>10</border>
+                                <object class="wxTextCtrl" name="textctrl_wave_return">
+                                  <size>75,-1</size>
+                                  <tooltip>The return wave number.</tooltip>
+                                </object>
+                              </object>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                  <object class="sizeritem">
+                    <option>0</option>
+                    <flag>wxEXPAND|wxTOP</flag>
+                    <border>5</border>
+                    <object class="wxStaticBoxSizer">
+                      <orient>wxVERTICAL</orient>
+                      <label>Temperature</label>
+                      <object class="sizeritem">
+                        <option>0</option>
+                        <flag>wxALL</flag>
+                        <border>5</border>
+                        <object class="wxFlexGridSizer">
+                          <rows>2</rows>
+                          <cols>3</cols>
+                          <vgap>0</vgap>
+                          <hgap>0</hgap>
+                          <flexibledirection>wxHORIZONTAL</flexibledirection>
+                          <growablecols></growablecols>
+                          <growablerows></growablerows>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_temperature_base">
+                              <label>Base</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_temperature_base_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_temperature_base">
+                              <size>75,-1</size>
+                              <value></value>
+                              <maxlength>0</maxlength>
+                              <tooltip>The base temperature during sagging.</tooltip>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxStaticText" name="statictext_temperature_interval">
+                              <label>Interval</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag>wxLEFT|wxRIGHT</flag>
+                            <border>10</border>
+                            <object class="wxStaticText" name="statictext_temperature_interval_units">
+                              <label>WWW</label>
+                            </object>
+                          </object>
+                          <object class="sizeritem">
+                            <option>0</option>
+                            <flag></flag>
+                            <border>0</border>
+                            <object class="wxTextCtrl" name="textctrl_temperature_interval">
+                              <size>75,-1</size>
+                              <value></value>
+                              <maxlength>0</maxlength>
+                              <tooltip>The temperature interval. This is applied to the base temperature to determine the range of sagging values to calculate.</tooltip>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+              </object>
+            </object>
+            <object class="notebookpage" name="page_notes">
+              <label>Notes</label>
+              <object class="wxPanel" name="panel_notes">
+                <style>wxTAB_TRAVERSAL</style>
+                <object class="wxBoxSizer">
+                  <orient>wxVERTICAL</orient>
+                  <object class="sizeritem">
+                    <option>1</option>
+                    <flag>wxEXPAND</flag>
+                    <border>5</border>
+                    <object class="wxTextCtrl" name="textctrl_notes">
+                      <style>wxTE_MULTILINE|wxTE_DONTWRAP|wxTE_PROCESS_TAB</style>
+                      <maxlength>0</maxlength>
+                    </object>
+                  </object>
+                </object>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object class="sizeritem">
+        <option>0</option>
+        <flag>wxALIGN_RIGHT</flag>
+        <border>5</border>
+        <object class="wxBoxSizer">
+          <orient>wxHORIZONTAL</orient>
+          <object class="sizeritem">
+            <option>0</option>
+            <flag>wxALL</flag>
+            <border>5</border>
+            <object class="wxButton" name="wxID_CANCEL">
+              <label>Cancel</label>
+              <default>0</default>
+            </object>
+          </object>
+          <object class="sizeritem">
+            <option>0</option>
+            <flag>wxALL</flag>
+            <border>5</border>
+            <object class="wxButton" name="wxID_OK">
+              <label>OK</label>
+              <default>1</default>
+            </object>
+          </object>
+        </object>
+      </object>
+      </object>
+    </object>
+	</object>
+</resource>
