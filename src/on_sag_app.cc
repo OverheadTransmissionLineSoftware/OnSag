@@ -130,6 +130,10 @@ bool OnSagApp::OnInit() {
   config_.color_background = *wxBLACK;
   wxPrintData data_print;
   data_print.SetOrientation(wxLANDSCAPE);
+  config_.data_page = new wxPageSetupDialogData();
+  config_.data_page->SetPrintData(data_print);
+  config_.data_page->SetMarginBottomRight(wxPoint(15, 15));
+  config_.data_page->SetMarginTopLeft(wxPoint(15, 15));
   config_.is_maximized_frame = true;
   config_.level_log = wxLOG_Message;
   config_.options_plot_profile.color_catenary = *wxGREEN;

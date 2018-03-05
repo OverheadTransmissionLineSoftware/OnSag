@@ -4,6 +4,7 @@
 #include "on_sag_frame.h"
 
 #include "wx/aboutdlg.h"
+#include "wx/printdlg.h"
 #include "wx/splitter.h"
 #include "wx/xrc/xmlres.h"
 
@@ -49,6 +50,7 @@ bool DocumentFileDropTarget::OnDropFiles(wxCoord x, wxCoord y,
 }
 
 BEGIN_EVENT_TABLE(OnSagFrame, wxDocParentFrame)
+  EVT_MENU(XRCID("menuitem_file_pagesetup"), OnSagFrame::OnMenuFilePageSetup)
   EVT_MENU(XRCID("menuitem_file_preferences"), OnSagFrame::OnMenuFilePreferences)
   EVT_MENU(XRCID("menuitem_help_about"), OnSagFrame::OnMenuHelpAbout)
   EVT_MENU(XRCID("menuitem_view_log"), OnSagFrame::OnMenuViewLog)
@@ -96,6 +98,21 @@ OnSagFrame::~OnSagFrame() {
 
   // resets aui manager
   manager_.UnInit();
+}
+
+void OnSagFrame::OnMenuFilePageSetup(wxCommandEvent& event) {
+  // gets application page setup data
+  wxPageSetupDialogData* data_page = wxGetApp().config()->data_page;
+
+  // creates and shows dialog
+  //wxPageSetupDialogData data_page(data_print);
+  wxPageSetupDialog dialog(this, data_page);
+  if (dialog.ShowModal() != wxID_OK) {
+    return;
+  }
+
+  // updates print data
+  *data_page = dialog.GetPageSetupDialogData();
 }
 
 void OnSagFrame::OnMenuFilePreferences(wxCommandEvent& event) {

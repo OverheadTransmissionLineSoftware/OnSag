@@ -31,6 +31,10 @@ class OnSagView : public wxView {
   /// \brief Destructor.
   ~OnSagView();
 
+  /// \brief Gets the graphics plot rect.
+  /// \return The graphics plot rect.
+  wxRect GraphicsPlotRect() const;
+
   /// \brief Handles closing the view.
   /// \param[in] delete_window
   ///   An indicator that determines if the child windows should be deleted.
@@ -47,11 +51,25 @@ class OnSagView : public wxView {
   /// This function is called by wxWidgets.
   virtual bool OnCreate(wxDocument *doc, long flags);
 
+  /// \brief Creates a printout.
+  /// \return A printout.
+  virtual wxPrintout* OnCreatePrintout();
+
   /// \brief Handles drawing/rendering the view.
   /// \param[in] dc
   ///   The device context.
   /// This function is called by wxWidgets.
   virtual void OnDraw(wxDC *dc);
+
+  /// \brief Handles the print event.
+  /// \param[in] event
+  ///   The event.
+  void OnPrint(wxCommandEvent& event);
+
+  /// \brief Handles the print preview event.
+  /// \param[in] event
+  ///   The event.
+  void OnPrintPreview(wxCommandEvent& event);
 
   /// \brief Handles updating of the view.
   /// \param[in] sender
@@ -118,6 +136,8 @@ class OnSagView : public wxView {
   /// \brief This allows wxWidgets to create this class dynamically as part of
   ///   the docview framework.
   wxDECLARE_DYNAMIC_CLASS(OnSagView);
+
+  DECLARE_EVENT_TABLE()
 };
 
 #endif  // OTLS_ONSAG_ONSAGVIEW_H_

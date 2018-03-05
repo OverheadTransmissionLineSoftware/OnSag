@@ -204,6 +204,9 @@
 		<Unit filename="../../include/on_sag_frame.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
+		<Unit filename="../../include/on_sag_printout.h">
+			<Option virtualFolder="Header Files/" />
+		</Unit>
 		<Unit filename="../../include/on_sag_view.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
@@ -331,6 +334,9 @@
 			<Option virtualFolder="Source Files/" />
 		</Unit>
 		<Unit filename="../../src/on_sag_frame.cc">
+			<Option virtualFolder="Source Files/" />
+		</Unit>
+		<Unit filename="../../src/on_sag_printout.cc">
 			<Option virtualFolder="Source Files/" />
 		</Unit>
 		<Unit filename="../../src/on_sag_view.cc">

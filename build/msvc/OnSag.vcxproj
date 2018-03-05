@@ -121,6 +121,7 @@
     <ClInclude Include="..\..\include\on_sag_doc_commands.h" />
     <ClInclude Include="..\..\include\on_sag_doc_xml_handler.h" />
     <ClInclude Include="..\..\include\on_sag_frame.h" />
+    <ClInclude Include="..\..\include\on_sag_printout.h" />
     <ClInclude Include="..\..\include\on_sag_view.h" />
     <ClInclude Include="..\..\include\preferences_dialog.h" />
     <ClInclude Include="..\..\include\profile_plot_options_dialog.h" />
@@ -189,6 +190,7 @@
     <ClCompile Include="..\..\src\on_sag_doc_commands.cc" />
     <ClCompile Include="..\..\src\on_sag_doc_xml_handler.cc" />
     <ClCompile Include="..\..\src\on_sag_frame.cc" />
+    <ClCompile Include="..\..\src\on_sag_printout.cc" />
     <ClCompile Include="..\..\src\on_sag_view.cc" />
     <ClCompile Include="..\..\src\preferences_dialog.cc" />
     <ClCompile Include="..\..\src\profile_plot_options_dialog.cc" />

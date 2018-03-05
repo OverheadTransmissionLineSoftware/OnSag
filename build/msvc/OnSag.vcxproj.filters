@@ -180,6 +180,9 @@
     <ClInclude Include="..\..\include\profile_plot_options_dialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\on_sag_printout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\external\AppCommon\res\xpm\sort_arrow_down.xpm">
@@ -371,6 +374,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\profile_plot_options_dialog.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\on_sag_printout.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

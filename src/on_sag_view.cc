@@ -7,6 +7,14 @@
 #include "wx/cmdproc.h"
 
 #include "on_sag_app.h"
+#include "on_sag_printout.h"
+
+IMPLEMENT_DYNAMIC_CLASS(OnSagView, wxView)
+
+BEGIN_EVENT_TABLE(OnSagView, wxView)
+  EVT_MENU(wxID_PREVIEW, OnSagView::OnPrintPreview)
+  EVT_MENU(wxID_PRINT, OnSagView::OnPrint)
+END_EVENT_TABLE()
 
 OnSagView::OnSagView() {
 }
@@ -14,7 +22,10 @@ OnSagView::OnSagView() {
 OnSagView::~OnSagView() {
 }
 
-IMPLEMENT_DYNAMIC_CLASS(OnSagView, wxView)
+wxRect OnSagView::GraphicsPlotRect() const {
+  // gets active plot pane rect
+  return pane_plot_->GetClientRect();
+}
 
 bool OnSagView::OnClose(bool WXUNUSED(delete_window)) {
   if (!GetDocument()->Close()) {
@@ -137,6 +148,10 @@ bool OnSagView::OnCreate(wxDocument *doc, long flags) {
   return true;
 }
 
+wxPrintout* OnSagView::OnCreatePrintout() {
+  return new OnSagPrintout(this);
+}
+
 void OnSagView::OnDraw(wxDC *dc) {
   // caches the current background
   // alters the background to white if view is rendering to print
@@ -150,6 +165,50 @@ void OnSagView::OnDraw(wxDC *dc) {
 
   // resets to the original background
   pane_plot_->set_background(brush);
+}
+
+void OnSagView::OnPrint(wxCommandEvent& event) {
+  // gets printout
+  wxPrintout* printout = OnCreatePrintout();
+
+  // sets up printer and prints
+  wxPrintDialogData data_print(wxGetApp().config()->data_page->GetPrintData());
+  wxPrinter printer(&data_print);
+  if (printer.Print(wxGetApp().frame(), printout) == false) {
+    if (wxPrinter::GetLastError() == wxPRINTER_ERROR) {
+      wxLogError("There was a problem printing.");
+    }
+  }
+
+  delete printout;
+}
+
+void OnSagView::OnPrintPreview(wxCommandEvent& event) {
+  // gets printouts
+  // one is for previewing, the other is for printing
+  wxPrintout* printout_view = OnCreatePrintout();
+  wxPrintout* printout_print = OnCreatePrintout();
+
+  // creates a print dialog data using app data
+  wxPrintDialogData data(wxGetApp().config()->data_page->GetPrintData());
+
+  // generates a print preview
+  wxPrintPreview* preview = new wxPrintPreview(printout_view, printout_print,
+                                               &data);
+  if (preview->IsOk() == false) {
+    delete preview;
+    wxLogError("There was a problem previewing.");
+    return;
+  }
+
+  // creates and shows a preview frame
+  wxPreviewFrame* frame = new wxPreviewFrame(preview, wxGetApp().frame(),
+                                             "Print Preview",
+                                             wxPoint(100, 100),
+                                             wxSize(850, 750));
+  frame->Centre(wxBOTH);
+  frame->Initialize();
+  frame->Show();
 }
 
 void OnSagView::OnUpdate(wxView* sender, wxObject* hint) {

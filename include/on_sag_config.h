@@ -45,6 +45,10 @@ struct OnSagConfig {
   ///   The background color.
   wxColour color_background;
 
+  /// \var data_page
+  ///   The page setup data for printing.
+  wxPageSetupDialogData* data_page;
+
   /// \var is_maximized_frame
   ///   An indicator that determines if the frame is maximized when created.
   ///   This is only updated on startup/exit.
