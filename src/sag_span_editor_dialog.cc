@@ -148,11 +148,11 @@ void SagSpanEditorDialog::SetUnitsStaticText(const units::UnitSystem& units) {
     XRCCTRL(*this, "statictext_cable_weight_units",
             wxStaticText)->SetLabel("[N/m]");
     XRCCTRL(*this, "statictext_cable_temperature_units",
-            wxStaticText)->SetLabel("[degC]");
+            wxStaticText)->SetLabel("[°C]");
     XRCCTRL(*this, "statictext_cable_tension_units",
             wxStaticText)->SetLabel("[N]");
     XRCCTRL(*this, "statictext_correction_creep_units",
-            wxStaticText)->SetLabel("[degC]");
+            wxStaticText)->SetLabel("[°C]");
     XRCCTRL(*this, "statictext_correction_sag_units",
             wxStaticText)->SetLabel("[cm]");
     XRCCTRL(*this, "statictext_scale_units",
@@ -174,19 +174,19 @@ void SagSpanEditorDialog::SetUnitsStaticText(const units::UnitSystem& units) {
     XRCCTRL(*this, "statictext_transit_y_units",
             wxStaticText)->SetLabel("[m]");
     XRCCTRL(*this, "statictext_temperature_base_units",
-            wxStaticText)->SetLabel("[degC]");
+            wxStaticText)->SetLabel("[°C]");
     XRCCTRL(*this, "statictext_temperature_interval_units",
-            wxStaticText)->SetLabel("[degC]");
+            wxStaticText)->SetLabel("[°C]");
   } else if (units == units::UnitSystem::kImperial) {
     // cable notebook page
     XRCCTRL(*this, "statictext_cable_weight_units",
             wxStaticText)->SetLabel("[lb/ft]");
     XRCCTRL(*this, "statictext_cable_temperature_units",
-            wxStaticText)->SetLabel("[degF]");
+            wxStaticText)->SetLabel("[°F]");
     XRCCTRL(*this, "statictext_cable_tension_units",
             wxStaticText)->SetLabel("[lbs]");
     XRCCTRL(*this, "statictext_correction_creep_units",
-            wxStaticText)->SetLabel("[degF]");
+            wxStaticText)->SetLabel("[°F]");
     XRCCTRL(*this, "statictext_correction_sag_units",
             wxStaticText)->SetLabel("[in]");
     XRCCTRL(*this, "statictext_scale_units",
@@ -208,9 +208,9 @@ void SagSpanEditorDialog::SetUnitsStaticText(const units::UnitSystem& units) {
     XRCCTRL(*this, "statictext_transit_y_units",
             wxStaticText)->SetLabel("[ft]");
     XRCCTRL(*this, "statictext_temperature_base_units",
-            wxStaticText)->SetLabel("[degF]");
+            wxStaticText)->SetLabel("[°F]");
     XRCCTRL(*this, "statictext_temperature_interval_units",
-            wxStaticText)->SetLabel("[degF]");
+            wxStaticText)->SetLabel("[°F]");
   }
 }
 
