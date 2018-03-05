@@ -127,11 +127,16 @@ bool OnSagApp::OnInit() {
 
   // manually initailizes application config defaults
   filename = wxFileName(filepath_config_);
+  config_.color_background = *wxBLACK;
   wxPrintData data_print;
   data_print.SetOrientation(wxLANDSCAPE);
-  config_.color_background = *wxBLACK;
   config_.is_maximized_frame = true;
   config_.level_log = wxLOG_Message;
+  config_.options_plot_profile.color_catenary = *wxGREEN;
+  config_.options_plot_profile.color_method = *wxBLUE;
+  config_.options_plot_profile.scale_horizontal = 1;
+  config_.options_plot_profile.scale_vertical = 10;
+  config_.options_plot_profile.thickness_line = 1;
   config_.size_frame = wxSize(400, 400);
   config_.units = units::UnitSystem::kImperial;
 

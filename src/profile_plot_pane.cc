@@ -14,15 +14,18 @@
 #include "on_sag_app.h"
 #include "on_sag_doc.h"
 #include "on_sag_view.h"
+#include "profile_plot_options_dialog.h"
 
 /// \par OVERVIEW
 ///
 /// This is the enumeration for the context menu.
 enum {
   kFitPlotData = 0,
+  kOptions,
 };
 
 BEGIN_EVENT_TABLE(ProfilePlotPane, PlotPane2d)
+  EVT_MENU(wxID_ANY, ProfilePlotPane::OnContextMenuSelect)
   EVT_MOTION(ProfilePlotPane::OnMouse)
   EVT_RIGHT_DOWN(ProfilePlotPane::OnMouse)
 END_EVENT_TABLE()
@@ -31,16 +34,17 @@ ProfilePlotPane::ProfilePlotPane(wxWindow* parent, wxView* view)
     : PlotPane2d(parent) {
   view_ = view;
 
-  // gets config
+  // gets config and options
   OnSagConfig* config = wxGetApp().config();
+  options_ = &config->options_plot_profile;
 
   // sets plot defaults
   const wxBrush* brush =
       wxTheBrushList->FindOrCreateBrush(config->color_background);
   plot_.set_background(*brush);
   plot_.set_is_fitted(true);
-  plot_.set_scale_x(1);
-  plot_.set_scale_y(10);
+  plot_.set_scale_x(options_->scale_horizontal);
+  plot_.set_scale_y(options_->scale_vertical);
   plot_.set_zoom_factor_fitted(1.0 / 1.2);
 }
 
@@ -62,6 +66,10 @@ void ProfilePlotPane::Update(wxObject* hint) {
   const wxBrush* brush =
       wxTheBrushList->FindOrCreateBrush(config->color_background);
   plot_.set_background(*brush);
+
+  // updates plot based on options
+  plot_.set_scale_x(options_->scale_horizontal);
+  plot_.set_scale_y(options_->scale_vertical);
 
   // interprets hint
   const UpdateHint* hint_update = dynamic_cast<UpdateHint*>(hint);
@@ -104,6 +112,16 @@ void ProfilePlotPane::OnContextMenuSelect(wxCommandEvent& event) {
       plot_.set_is_fitted(true);
       this->Refresh();
     }
+  } else if (id_event == kOptions) {
+    // creates dialog and shows
+    ProfilePlotOptionsDialog dialog(this, options_);
+    if (dialog.ShowModal() != wxID_OK) {
+      return;
+    }
+
+    // updates plot and redraws
+    UpdateHint hint(UpdateHint::Type::kViewSelect);
+    Update(&hint);
   }
 }
 
@@ -115,6 +133,8 @@ void ProfilePlotPane::OnMouse(wxMouseEvent& event) {
 
     menu.AppendCheckItem(kFitPlotData, "Fit Plot");
     menu.Check(kFitPlotData, plot_.is_fitted());
+    menu.AppendSeparator();
+    menu.Append(kOptions, "Options");
 
     // shows context menu
     // the event is caught by the pane
@@ -508,7 +528,8 @@ void ProfilePlotPane::UpdatePlotRenderers() {
   const wxPen* pen = nullptr;
 
   // adds catenary renderer
-  pen = wxThePenList->FindOrCreatePen(*wxGREEN, 1, wxPENSTYLE_SOLID);
+  pen = wxThePenList->FindOrCreatePen(options_->color_catenary,
+                                      options_->thickness_line);
   renderer_line = new LineRenderer2d();
   renderer_line->set_dataset(&dataset_catenary_);
   renderer_line->set_pen(pen);
@@ -528,7 +549,8 @@ void ProfilePlotPane::UpdatePlotRenderers() {
   plot_.AddRenderer(renderer_text);
 
   // adds method line renderer
-  pen = wxThePenList->FindOrCreatePen(*wxRED, 1, wxPENSTYLE_SOLID);
+  pen = wxThePenList->FindOrCreatePen(options_->color_method,
+                                      options_->thickness_line);
   renderer_line = new LineRenderer2d();
   renderer_line->set_dataset(&dataset_method_lines_);
   renderer_line->set_pen(pen);

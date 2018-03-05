@@ -26,7 +26,7 @@
 					<Add directory="../../external/Models/build/codeblocks/debug" />
 				</Linker>
 				<ExtraCommands>
-					<Add before="../../external/wxWidgets/build-debug/utils/wxrc/wxrc -v -c -o ../../res/resources.cc ../../external/AppCommon/res/xrc/error_message_dialog.xrc ../../res/xrc/edit_pane.xrc ../../res/xrc/on_sag_menubar.xrc ../../res/xrc/preferences_dialog.xrc ../../res/xrc/sag_span_editor_dialog.xrc" />
+					<Add before="../../external/wxWidgets/build-debug/utils/wxrc/wxrc -v -c -o ../../res/resources.cc ../../external/AppCommon/res/xrc/error_message_dialog.xrc ../../res/xrc/edit_pane.xrc ../../res/xrc/on_sag_menubar.xrc ../../res/xrc/preferences_dialog.xrc ../../res/xrc/profile_plot_options_dialog.xrc ../../res/xrc/sag_span_editor_dialog.xrc" />
 				</ExtraCommands>
 			</Target>
 			<Target title="release">
@@ -49,7 +49,7 @@
 					<Add directory="../../external/Models/build/codeblocks/release" />
 				</Linker>
 				<ExtraCommands>
-					<Add before="../../external/wxWidgets/build-release/utils/wxrc/wxrc -v -c -o ../../res/resources.cc ../../external/AppCommon/res/xrc/error_message_dialog.xrc ../../res/xrc/edit_pane.xrc ../../res/xrc/on_sag_menubar.xrc ../../res/xrc/preferences_dialog.xrc ../../res/xrc/sag_span_editor_dialog.xrc" />
+					<Add before="../../external/wxWidgets/build-release/utils/wxrc/wxrc -v -c -o ../../res/resources.cc ../../external/AppCommon/res/xrc/error_message_dialog.xrc ../../res/xrc/edit_pane.xrc ../../res/xrc/on_sag_menubar.xrc ../../res/xrc/preferences_dialog.xrc ../../res/xrc/profile_plot_options_dialog.xrc ../../res/xrc/sag_span_editor_dialog.xrc" />
 				</ExtraCommands>
 			</Target>
 		</Build>
@@ -210,6 +210,9 @@
 		<Unit filename="../../include/preferences_dialog.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
+		<Unit filename="../../include/profile_plot_options_dialog.h">
+			<Option virtualFolder="Header Files/" />
+		</Unit>
 		<Unit filename="../../include/profile_plot_pane.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
@@ -297,6 +300,9 @@
 		<Unit filename="../../res/xrc/preferences_dialog.xrc">
 			<Option virtualFolder="Resource Files/XRC/" />
 		</Unit>
+		<Unit filename="../../res/xrc/profile_plot_options_dialog.xrc">
+			<Option virtualFolder="Resource Files/XRC/" />
+		</Unit>
 		<Unit filename="../../res/xrc/sag_span_editor_dialog.xrc">
 			<Option virtualFolder="Resource Files/XRC/" />
 		</Unit>
@@ -331,6 +337,9 @@
 			<Option virtualFolder="Source Files/" />
 		</Unit>
 		<Unit filename="../../src/preferences_dialog.cc">
+			<Option virtualFolder="Source Files/" />
+		</Unit>
+		<Unit filename="../../src/profile_plot_options_dialog.cc">
 			<Option virtualFolder="Source Files/" />
 		</Unit>
 		<Unit filename="../../src/profile_plot_pane.cc">

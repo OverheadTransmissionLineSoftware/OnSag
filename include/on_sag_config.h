@@ -12,6 +12,32 @@
 
 /// \par OVERVIEW
 ///
+/// This class has the options for the ProfilePlotPane.
+struct ProfilePlotOptions {
+ public:
+  /// \var color_catenary
+  ///   The catenary color.
+  wxColour color_catenary;
+
+  /// \var color_method
+  ///   The sagging method color.
+  wxColour color_method;
+
+  /// \var scale_horizontal
+  ///   The horizontal scale factor.
+  int scale_horizontal;
+
+  /// \var scale_vertical
+  ///   The vertical scale factor.
+  int scale_vertical;
+
+  /// \var thickness_line
+  ///   The line thickness.
+  int thickness_line;
+};
+
+/// \par OVERVIEW
+///
 /// This struct stores the application configuration settings.
 struct OnSagConfig {
  public:
@@ -27,6 +53,10 @@ struct OnSagConfig {
   /// \var level_log
   ///   The log level of the application.
   wxLogLevelValues level_log;
+
+  /// \var options_plot_profile
+  ///   The profile plot pane options.
+  ProfilePlotOptions options_plot_profile;
 
   /// \var perspective
   ///   The AUI perspective, which is based on the user layout of panes. The

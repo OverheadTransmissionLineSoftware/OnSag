@@ -10,6 +10,7 @@
 #include "models/transmissionline/catenary.h"
 #include "wx/docview.h"
 
+#include "on_sag_config.h"
 #include "sagging_analysis_result.h"
 
 /// \par OVERVIEW
@@ -84,6 +85,10 @@ class ProfilePlotPane : public PlotPane2d {
   /// \var dataset_method_lines_
   ///   The sag method line dataset.
   LineDataSet2d dataset_method_lines_;
+
+  /// \var options_
+  ///   The plot options, which are stored in the application config.
+  ProfilePlotOptions* options_;
 
   /// \var view_
   ///   The view.

@@ -67,7 +67,7 @@
       <AdditionalDependencies>otlsmodels_based.lib;otlsmodels_saggingd.lib;otlsmodels_transmissionlined.lib;wxbase31ud.lib;wxbase31ud_net.lib;wxbase31ud_xml.lib;wxexpatd.lib;wxjpegd.lib;wxmsw31ud_adv.lib;wxmsw31ud_core.lib;wxmsw31ud_xrc.lib;wxpngd.lib;wxregexud.lib;wxscintillad.lib;wxtiffd.lib;wxzlibd.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;shlwapi.lib;comctl32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;version.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>..\..\external\wxWidgets\utils\wxrc\vc_mswud_x64\wxrc.exe -v -c -o=..\..\res\resources.cc ..\..\external\AppCommon\res\xrc\error_message_dialog.xrc ..\..\res\xrc\edit_pane.xrc ..\..\res\xrc\on_sag_menubar.xrc ..\..\res/xrc\plan_plot_options_dialog.xrc ..\..\res\xrc\profile_plot_options_dialog.xrc ..\..\res\xrc\preferences_dialog.xrc ..\..\res\xrc\sag_span_editor_dialog.xrc</Command>
+      <Command>..\..\external\wxWidgets\utils\wxrc\vc_mswud_x64\wxrc.exe -v -c -o=..\..\res\resources.cc ..\..\external\AppCommon\res\xrc\error_message_dialog.xrc ..\..\res\xrc\edit_pane.xrc ..\..\res\xrc\on_sag_menubar.xrc ..\..\res\xrc\profile_plot_options_dialog.xrc ..\..\res\xrc\preferences_dialog.xrc ..\..\res\xrc\sag_span_editor_dialog.xrc</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -90,7 +90,7 @@
       <AdditionalDependencies>otlsmodels_base.lib;otlsmodels_sagging.lib;otlsmodels_transmissionline.lib;wxbase31u.lib;wxbase31u_net.lib;wxbase31u_xml.lib;wxexpat.lib;wxjpeg.lib;wxmsw31u_adv.lib;wxmsw31u_core.lib;wxmsw31u_xrc.lib;wxpng.lib;wxregexu.lib;wxscintilla.lib;wxtiff.lib;wxzlib.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;shlwapi.lib;comctl32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;version.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>..\..\external\wxWidgets\utils\wxrc\vc_mswu_x64\wxrc.exe -v -c -o=..\..\res\resources.cc ..\..\external\AppCommon\res\xrc\error_message_dialog.xrc ..\..\res\xrc\edit_pane.xrc ..\..\res\xrc\on_sag_menubar.xrc ..\..\res/xrc\plan_plot_options_dialog.xrc ..\..\res\xrc\profile_plot_options_dialog.xrc ..\..\res\xrc\preferences_dialog.xrc ..\..\res\xrc\sag_span_editor_dialog.xrc</Command>
+      <Command>..\..\external\wxWidgets\utils\wxrc\vc_mswu_x64\wxrc.exe -v -c -o=..\..\res\resources.cc ..\..\external\AppCommon\res\xrc\error_message_dialog.xrc ..\..\res\xrc\edit_pane.xrc ..\..\res\xrc\on_sag_menubar.xrc ..\..\res\xrc\profile_plot_options_dialog.xrc ..\..\res\xrc\preferences_dialog.xrc ..\..\res\xrc\sag_span_editor_dialog.xrc</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -123,6 +123,7 @@
     <ClInclude Include="..\..\include\on_sag_frame.h" />
     <ClInclude Include="..\..\include\on_sag_view.h" />
     <ClInclude Include="..\..\include\preferences_dialog.h" />
+    <ClInclude Include="..\..\include\profile_plot_options_dialog.h" />
     <ClInclude Include="..\..\include\profile_plot_pane.h" />
     <ClInclude Include="..\..\include\results_pane.h" />
     <ClInclude Include="..\..\include\sagging_analysis_result.h" />
@@ -155,6 +156,7 @@
     <None Include="..\..\res\xrc\edit_pane.xrc" />
     <None Include="..\..\res\xrc\on_sag_menubar.xrc" />
     <None Include="..\..\res\xrc\preferences_dialog.xrc" />
+    <None Include="..\..\res\xrc\profile_plot_options_dialog.xrc" />
     <None Include="..\..\res\xrc\sag_span_editor_dialog.xrc" />
     <None Include="..\..\test\onsag.conf" />
     <None Include="..\..\test\test.onsag" />
@@ -189,6 +191,7 @@
     <ClCompile Include="..\..\src\on_sag_frame.cc" />
     <ClCompile Include="..\..\src\on_sag_view.cc" />
     <ClCompile Include="..\..\src\preferences_dialog.cc" />
+    <ClCompile Include="..\..\src\profile_plot_options_dialog.cc" />
     <ClCompile Include="..\..\src\profile_plot_pane.cc" />
     <ClCompile Include="..\..\src\results_pane.cc" />
     <ClCompile Include="..\..\src\sag_cable.cc" />

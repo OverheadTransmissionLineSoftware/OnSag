@@ -177,6 +177,9 @@
     <ClInclude Include="..\..\include\span_sagger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\profile_plot_options_dialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\external\AppCommon\res\xpm\sort_arrow_down.xpm">
@@ -226,6 +229,9 @@
     </None>
     <None Include="..\..\test\test.onsag">
       <Filter>Test</Filter>
+    </None>
+    <None Include="..\..\res\xrc\profile_plot_options_dialog.xrc">
+      <Filter>Resource Files\XRC</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -362,6 +368,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\res\resources.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\profile_plot_options_dialog.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
