@@ -48,7 +48,7 @@ void SagCableUnitConverter::ConvertUnitSystem(
   if (system_to == units::UnitSystem::kMetric) {
     cable.correction_creep = units::ConvertTemperature(
       cable.correction_creep,
-      units::TemperatureConversionType::kFahrenheitToCelsius, 1, true, false);
+      units::TemperatureConversionType::kRankineToKelvin, 1, true);
 
     cable.correction_sag = units::ConvertLength(
       cable.correction_sag,
@@ -60,7 +60,7 @@ void SagCableUnitConverter::ConvertUnitSystem(
 
       point.temperature = units::ConvertTemperature(
         point.temperature,
-        units::TemperatureConversionType::kFahrenheitToCelsius, 1, true, true);
+        units::TemperatureConversionType::kFahrenheitToCelsius, 1, true);
       point.tension_horizontal = units::ConvertForce(
         point.tension_horizontal,
         units::ForceConversionType::kPoundsToNewtons);
@@ -76,7 +76,7 @@ void SagCableUnitConverter::ConvertUnitSystem(
   } else if (system_to == units::UnitSystem::kImperial) {
     cable.correction_creep = units::ConvertTemperature(
       cable.correction_creep,
-      units::TemperatureConversionType::kCelsiusToFahrenheit, 1, true, false);
+      units::TemperatureConversionType::kKelvinToRankine, 1, true);
 
     cable.correction_sag = units::ConvertLength(
       cable.correction_sag,
@@ -88,7 +88,7 @@ void SagCableUnitConverter::ConvertUnitSystem(
 
       point.temperature = units::ConvertTemperature(
         point.temperature,
-        units::TemperatureConversionType::kCelsiusToFahrenheit, 1, true, true);
+        units::TemperatureConversionType::kCelsiusToFahrenheit, 1, true);
       point.tension_horizontal = units::ConvertForce(
         point.tension_horizontal,
         units::ForceConversionType::kNewtonsToPounds);

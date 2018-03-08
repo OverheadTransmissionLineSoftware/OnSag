@@ -42,20 +42,20 @@ void SagSpanUnitConverter::ConvertUnitSystem(
   if (system_to == units::UnitSystem::kMetric) {
     span.temperature_base = units::ConvertTemperature(
       span.temperature_base,
-      units::TemperatureConversionType::kFahrenheitToCelsius, 1, true, true);
+      units::TemperatureConversionType::kFahrenheitToCelsius, 1, true);
 
     span.temperature_interval = units::ConvertTemperature(
       span.temperature_interval,
-      units::TemperatureConversionType::kFahrenheitToCelsius, 1, true, false);
+      units::TemperatureConversionType::kRankineToKelvin, 1, true);
 
   } else if (system_to == units::UnitSystem::kImperial) {
     span.temperature_base = units::ConvertTemperature(
       span.temperature_base,
-      units::TemperatureConversionType::kCelsiusToFahrenheit, 1, true, true);
+      units::TemperatureConversionType::kCelsiusToFahrenheit, 1, true);
 
     span.temperature_interval = units::ConvertTemperature(
       span.temperature_interval,
-      units::TemperatureConversionType::kCelsiusToFahrenheit, 1, true, false);
+      units::TemperatureConversionType::kKelvinToRankine, 1, true);
   }
 
   SagCableUnitConverter::ConvertUnitSystem(system_from, system_to, span.cable);
