@@ -6,6 +6,7 @@
 #include <cmath>
 
 #include "models/base/helper.h"
+#include "models/base/polynomial.h"
 #include "models/transmissionline/catenary_solver.h"
 
 SpanSagger::SpanSagger() {
@@ -385,6 +386,77 @@ bool SpanSagger::IsValidControlFactor(const double& factor_control) const {
   }
 }
 
+double SpanSagger::TensionHorizontalPolynomialFitted(
+    const std::list<const SagCable::TensionPoint*>& points,
+    const double& temperature) const {
+  // determines shift to absolute scale
+  double temperature_shift = 0;
+  if (units_ == units::UnitSystem::kImperial) {
+    temperature_shift = units::ConvertTemperature(
+        0,
+        units::TemperatureConversionType::kFahrenheitToRankine);
+  } else if (units_ == units::UnitSystem::kMetric) {
+    temperature_shift = units::ConvertTemperature(
+        0,
+        units::TemperatureConversionType::kCelsiusToKelvin);
+  } else {
+    return -999999;
+  }
+
+  // creates a duplicated list of points
+  // converts to x-y coordinates (x=temperature, y=tension)
+  // x coordinates use absolute temperature scale
+  std::vector<Point2d<double>> pts(3);
+  for (auto iter = points.cbegin(); iter != points.cend(); iter++) {
+    const SagCable::TensionPoint* point = *iter;
+
+    Point2d<double> pt;
+    pt.x = point->temperature + temperature_shift;
+    pt.y = point->tension_horizontal;
+
+    const int i = std::distance(points.cbegin(), iter);
+    pts[i] = pt;
+  }
+
+  // converts target temperature to absolute scale
+  const double x_target = temperature + temperature_shift;
+
+  /// \todo this method needs updated to use a better implemented polynomial
+  ///   fitting method. See here:
+  /// https://en.wikipedia.org/wiki/Newton_polynomial
+
+  // calculates constants to simplify expressions
+  const double k1 = (pts[0].y - pts[2].y) / std::pow(pts[0].x, 2);
+  const double k2 = (pts[2].x - pts[0].x) / std::pow(pts[0].x, 2);
+  const double k3 = 1 - (std::pow(pts[2].x, 2) / std::pow(pts[0].x, 2));
+  const double k4 = (std::pow(pts[2].x, 2) - std::pow(pts[1].x, 2)) / pts[1].x;
+  const double k5 = (pts[1].y - pts[2].y) / pts[1].x;
+  const double k6 = 1 - (pts[2].x / pts[1].x);
+
+  // calculate coefficients of parabolic interpolating polynomial
+  std::vector<double> coefficients(3);
+  coefficients[1] = ((k5 * k3) + (k1 * k4)) / ((k6 * k3) - (k2 * k4));
+  coefficients[2] = (k1 + (coefficients[1] * k2)) / k3;
+  coefficients[0] = pts[2].y - (coefficients[2] * std::pow(pts[2].x, 2))
+                    - (coefficients[1] * pts[2].x);
+
+  // creates a polynomial from the coefficients
+  Polynomial polynomial;
+  polynomial.set_coefficients(&coefficients);
+
+  // checks for negative polynomial concavity, which is related to how a
+  // catenary lets off tension as temperature increases
+  Polynomial derivative_1 = polynomial.Derivative();
+  Polynomial derivative_2 = derivative_1.Derivative();
+  const double kConcavity = derivative_2.Y(x_target);
+  if (0 < helper::Round(kConcavity, 4)) {
+    return -999999;
+  }
+
+  // calculates the horizontal tension for the target temp
+  return polynomial.Y(x_target);
+}
+
 bool SpanSagger::Update() const {
   // updates the catenary
   is_updated_catenary_ = UpdateCatenary();
@@ -428,20 +500,28 @@ bool SpanSagger::UpdateCatenary() const {
     return false;
   }
 
-  // gets boundary points
-  const SagCable::TensionPoint& point_start =
-      *std::next(cable_->tensions.cbegin(), index - 1);
-  const SagCable::TensionPoint& point_end =
-      *std::next(cable_->tensions.cbegin(), index);
+  // gets polynomial fit points
+  // there are only 5 points total, and 3 are needed for polynomial fit
+  // checks against median point and selects points 0-2 or 2-4
+  std::list <const SagCable::TensionPoint*> points;
+  const SagCable::TensionPoint& point_median =
+      *std::next(cable_->tensions.cbegin(), 2);
+  if (temperature <= point_median.temperature) {
+    points.push_back(&(*std::next(cable_->tensions.cbegin(), 0)));
+    points.push_back(&(*std::next(cable_->tensions.cbegin(), 1)));
+    points.push_back(&(*std::next(cable_->tensions.cbegin(), 2)));
+  } else if (point_median.temperature < temperature) {
+    points.push_back(&(*std::next(cable_->tensions.cbegin(), 2)));
+    points.push_back(&(*std::next(cable_->tensions.cbegin(), 3)));
+    points.push_back(&(*std::next(cable_->tensions.cbegin(), 4)));
+  }
 
   // interpolates to find the tension
-  /// \todo update this method to use a polynomial type fit
-  const double tension_horizontal = helper::LinearY(
-      point_start.temperature,
-      point_start.tension_horizontal,
-      point_end.temperature,
-      point_end.tension_horizontal,
-      temperature);
+  const double tension_horizontal =
+      TensionHorizontalPolynomialFitted(points, temperature);
+  if (tension_horizontal == -999999) {
+    return false;
+  }
 
   // solves for the catenary spacing
   Vector3d spacing;

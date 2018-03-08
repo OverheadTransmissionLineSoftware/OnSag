@@ -173,6 +173,16 @@ class SpanSagger {
   /// \return If the control factor is valid.
   bool IsValidControlFactor(const double& factor_control) const;
 
+  /// \brief Gets the polynomial fitted horizontal tension.
+  /// \param[in] points
+  ///   The points to use for the polynomial fit.
+  /// \param[in] temperature
+  ///   The target temperature.
+  /// \return The polynomial fitted horizontal tension.
+  double TensionHorizontalPolynomialFitted(
+      const std::list<const SagCable::TensionPoint*>& points,
+      const double& temperature) const;
+
   /// \brief Updates cached member variables and modifies control variables if
   ///   update is required.
   /// \return A boolean indicating if class updates completed successfully.
