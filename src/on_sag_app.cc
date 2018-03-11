@@ -85,6 +85,7 @@ int OnSagApp::OnExit() {
   FileHandler::SaveConfigFile(filepath_config_, config_);
 
   // cleans up allocated resources
+  delete config_.data_page;
   delete manager_doc_;
 
   // continues exit process
