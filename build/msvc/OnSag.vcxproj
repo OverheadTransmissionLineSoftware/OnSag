@@ -61,10 +61,12 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_DEPRECATE=1;_CRT_NON_CONFORMING_SWPRINTFS=1;_SCL_SECURE_NO_WARNINGS=1;__WXMSW__;_UNICODE;_WINDOWS;NOPCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MinimalRebuild>false</MinimalRebuild>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>..\..\external\wxWidgets\lib\vc_x64_lib;..\..\external\Models\build\msvc\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\external\wxWidgets\lib\vc_x64_lib;..\..\external\Models\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>otlsmodels_based.lib;otlsmodels_saggingd.lib;otlsmodels_transmissionlined.lib;wxbase31ud.lib;wxbase31ud_net.lib;wxbase31ud_xml.lib;wxexpatd.lib;wxjpegd.lib;wxmsw31ud_adv.lib;wxmsw31ud_core.lib;wxmsw31ud_xrc.lib;wxpngd.lib;wxregexud.lib;wxscintillad.lib;wxtiffd.lib;wxzlibd.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;shlwapi.lib;comctl32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;version.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PreBuildEvent>
       <Command>..\..\external\wxWidgets\utils\wxrc\vc_mswud_x64\wxrc.exe -v -c -o=..\..\res\resources.cc ..\..\external\AppCommon\res\xrc\error_message_dialog.xrc ..\..\res\xrc\edit_pane.xrc ..\..\res\xrc\on_sag_menubar.xrc ..\..\res\xrc\profile_plot_options_dialog.xrc ..\..\res\xrc\preferences_dialog.xrc ..\..\res\xrc\sag_span_editor_dialog.xrc</Command>
@@ -86,8 +88,9 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\..\external\wxWidgets\lib\vc_x64_lib;..\..\external\Models\build\msvc\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\external\wxWidgets\lib\vc_x64_lib;..\..\external\Models\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>otlsmodels_base.lib;otlsmodels_sagging.lib;otlsmodels_transmissionline.lib;wxbase31u.lib;wxbase31u_net.lib;wxbase31u_xml.lib;wxexpat.lib;wxjpeg.lib;wxmsw31u_adv.lib;wxmsw31u_core.lib;wxmsw31u_xrc.lib;wxpng.lib;wxregexu.lib;wxscintilla.lib;wxtiff.lib;wxzlib.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;shlwapi.lib;comctl32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;version.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PreBuildEvent>
       <Command>..\..\external\wxWidgets\utils\wxrc\vc_mswu_x64\wxrc.exe -v -c -o=..\..\res\resources.cc ..\..\external\AppCommon\res\xrc\error_message_dialog.xrc ..\..\res\xrc\edit_pane.xrc ..\..\res\xrc\on_sag_menubar.xrc ..\..\res\xrc\profile_plot_options_dialog.xrc ..\..\res\xrc\preferences_dialog.xrc ..\..\res\xrc\sag_span_editor_dialog.xrc</Command>
