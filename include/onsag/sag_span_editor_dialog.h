@@ -7,7 +7,7 @@
 #include "models/base/units.h"
 #include "wx/wx.h"
 
-#include "sag_span.h"
+#include "onsag/sag_span.h"
 
 /// \par OVERVIEW
 ///

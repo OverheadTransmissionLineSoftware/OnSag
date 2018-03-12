@@ -1,9 +1,9 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "on_sag_printout.h"
+#include "onsag/on_sag_printout.h"
 
-#include "on_sag_app.h"
+#include "onsag/on_sag_app.h"
 
 OnSagPrintout::OnSagPrintout(OnSagView* view)
     : wxPrintout(wxGetApp().GetDocument()->GetFilename()) {

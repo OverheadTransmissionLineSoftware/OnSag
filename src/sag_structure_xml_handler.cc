@@ -1,7 +1,7 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "sag_structure_xml_handler.h"
+#include "onsag/sag_structure_xml_handler.h"
 
 #include "appcommon/xml/point_xml_handler.h"
 

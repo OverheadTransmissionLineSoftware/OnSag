@@ -1,14 +1,14 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "analysis_controller.h"
+#include "onsag/analysis_controller.h"
 
 #include "appcommon/widgets/status_bar_log.h"
 #include "appcommon/widgets/timer.h"
 #include "models/base/helper.h"
 #include "wx/wx.h"
 
-#include "on_sag_app.h"
+#include "onsag/on_sag_app.h"
 
 AnalysisThread::AnalysisThread() : wxThread(wxTHREAD_JOINABLE) {
   span_ = nullptr;

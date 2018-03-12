@@ -1,15 +1,15 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "on_sag_doc.h"
+#include "onsag/on_sag_doc.h"
 
 #include "appcommon/widgets/status_bar_log.h"
 #include "wx/cmdproc.h"
 #include "wx/xml/xml.h"
 
-#include "on_sag_app.h"
-#include "on_sag_doc_xml_handler.h"
-#include "sag_span_unit_converter.h"
+#include "onsag/on_sag_app.h"
+#include "onsag/on_sag_doc_xml_handler.h"
+#include "onsag/sag_span_unit_converter.h"
 
 IMPLEMENT_DYNAMIC_CLASS(OnSagDoc, wxDocument)
 

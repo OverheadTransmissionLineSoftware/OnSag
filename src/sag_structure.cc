@@ -1,7 +1,7 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "sag_structure.h"
+#include "onsag/sag_structure.h"
 
 SagStructure::SagStructure() {
   point_attachment = Point2d<double>();

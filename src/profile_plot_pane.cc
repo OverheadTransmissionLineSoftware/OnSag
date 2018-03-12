@@ -1,7 +1,7 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "profile_plot_pane.h"
+#include "onsag/profile_plot_pane.h"
 
 #include <cmath>
 
@@ -11,10 +11,10 @@
 #include "models/base/helper.h"
 #include "wx/dcbuffer.h"
 
-#include "on_sag_app.h"
-#include "on_sag_doc.h"
-#include "on_sag_view.h"
-#include "profile_plot_options_dialog.h"
+#include "onsag/on_sag_app.h"
+#include "onsag/on_sag_doc.h"
+#include "onsag/on_sag_view.h"
+#include "onsag/profile_plot_options_dialog.h"
 
 /// \par OVERVIEW
 ///

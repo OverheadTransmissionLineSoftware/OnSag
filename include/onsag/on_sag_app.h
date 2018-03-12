@@ -10,9 +10,9 @@
 #include "wx/docview.h"
 #include "wx/wx.h"
 
-#include "on_sag_config.h"
-#include "on_sag_doc.h"
-#include "on_sag_frame.h"
+#include "onsag/on_sag_config.h"
+#include "onsag/on_sag_doc.h"
+#include "onsag/on_sag_frame.h"
 
 /// \par OVERVIEW
 ///

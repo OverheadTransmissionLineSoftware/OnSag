@@ -7,7 +7,7 @@
 #include <list>
 #include <string>
 
-#include "models/base/error_message.h"
+#include "onsag/models/base/error_message.h"
 
 /// \par OVERVIEW
 ///

@@ -9,7 +9,7 @@
 #include "wx/cmdproc.h"
 #include "wx/xml/xml.h"
 
-#include "on_sag_doc.h"
+#include "onsag/on_sag_doc.h"
 
 /// \par OVERVIEW
 ///

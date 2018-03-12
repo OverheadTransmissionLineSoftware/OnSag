@@ -6,7 +6,7 @@
 
 #include "wx/print.h"
 
-#include "on_sag_view.h"
+#include "onsag/on_sag_view.h"
 
 /// \par OVERVIEW
 ///

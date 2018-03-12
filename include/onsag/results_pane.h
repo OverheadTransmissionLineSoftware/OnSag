@@ -8,7 +8,7 @@
 #include "wx/docview.h"
 #include "wx/wx.h"
 
-#include "sagging_analysis_result.h"
+#include "sonsag/agging_analysis_result.h"
 
 /// \par OVERVIEW
 ///

@@ -1,13 +1,13 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "on_sag_view.h"
+#include "onsag/on_sag_view.h"
 
 #include "appcommon/widgets/status_bar_log.h"
 #include "wx/cmdproc.h"
 
-#include "on_sag_app.h"
-#include "on_sag_printout.h"
+#include "onsag/on_sag_app.h"
+#include "onsag/on_sag_printout.h"
 
 IMPLEMENT_DYNAMIC_CLASS(OnSagView, wxView)
 

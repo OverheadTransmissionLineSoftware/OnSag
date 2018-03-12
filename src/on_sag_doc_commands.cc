@@ -1,13 +1,13 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "on_sag_doc_commands.h"
+#include "onsag/on_sag_doc_commands.h"
 
 #include "wx/wx.h"
 
-#include "on_sag_app.h"
-#include "on_sag_doc.h"
-#include "sag_span_xml_handler.h"
+#include "onsag/on_sag_app.h"
+#include "onsag/on_sag_doc.h"
+#include "onsag/sag_span_xml_handler.h"
 
 // These are the string definitions for the various command types.
 const std::string SagSpanCommand::kNameDelete = "Delete Span";

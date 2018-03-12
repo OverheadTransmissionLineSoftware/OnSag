@@ -6,7 +6,7 @@
 
 #include "wx/docview.h"
 
-#include "analysis_controller.h"
+#include "onsag/analysis_controller.h"
 
 /// \par OVERVIEW
 ///

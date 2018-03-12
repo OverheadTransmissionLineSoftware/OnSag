@@ -1,9 +1,9 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "on_sag_doc_xml_handler.h"
+#include "onsag/on_sag_doc_xml_handler.h"
 
-#include "sag_span_xml_handler.h"
+#include "onsag/sag_span_xml_handler.h"
 
 wxXmlNode* OnSagDocXmlHandler::CreateNode(
     const OnSagDoc& doc,

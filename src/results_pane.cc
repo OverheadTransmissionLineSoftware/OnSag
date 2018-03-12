@@ -1,13 +1,13 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "results_pane.h"
+#include "onsag/results_pane.h"
 
 #include "models/base/helper.h"
 
-#include "on_sag_app.h"
-#include "on_sag_doc.h"
-#include "on_sag_view.h"
+#include "onsag/on_sag_app.h"
+#include "onsag/on_sag_doc.h"
+#include "onsag/on_sag_view.h"
 
 BEGIN_EVENT_TABLE(ResultsPane, wxPanel)
   EVT_LIST_ITEM_SELECTED(wxID_ANY, ResultsPane::OnListCtrlSelect)

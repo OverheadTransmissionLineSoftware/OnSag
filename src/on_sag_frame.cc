@@ -1,18 +1,18 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "on_sag_frame.h"
+#include "onsag/on_sag_frame.h"
 
 #include "wx/aboutdlg.h"
 #include "wx/printdlg.h"
 #include "wx/splitter.h"
 #include "wx/xrc/xmlres.h"
 
-#include "file_handler.h"
-#include "on_sag_app.h"
-#include "on_sag_doc.h"
-#include "on_sag_view.h"
-#include "preferences_dialog.h"
+#include "onsag/file_handler.h"
+#include "onsag/on_sag_app.h"
+#include "onsag/on_sag_doc.h"
+#include "onsag/on_sag_view.h"
+#include "onsag/preferences_dialog.h"
 #include "xpm/icon.xpm"
 
 DocumentFileDropTarget::DocumentFileDropTarget(wxWindow* parent) {

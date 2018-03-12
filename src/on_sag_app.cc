@@ -1,16 +1,16 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "on_sag_app.h"
+#include "onsag/on_sag_app.h"
 
 #include "appcommon/widgets/status_bar_log.h"
 #include "wx/filename.h"
 #include "wx/stdpaths.h"
 #include "wx/xrc/xmlres.h"
 
-#include "file_handler.h"
-#include "on_sag_doc.h"
-#include "on_sag_view.h"
+#include "onsag/file_handler.h"
+#include "onsag/on_sag_doc.h"
+#include "onsag/on_sag_view.h"
 
 /// This function handles loading all of the xrc files that are processed by
 /// the wxWidgets resource compiler. It is declared in an external file so

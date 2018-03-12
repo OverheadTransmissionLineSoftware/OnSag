@@ -8,9 +8,9 @@
 
 #include "wx/wx.h"
 
-#include "sag_span.h"
-#include "sagging_analysis_result.h"
-#include "span_sagger.h"
+#include "onsag/sag_span.h"
+#include "onsag/sagging_analysis_result.h"
+#include "onsag/span_sagger.h"
 
 /// \par OVERVIEW
 ///

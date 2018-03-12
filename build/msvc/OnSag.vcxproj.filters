@@ -90,97 +90,97 @@
     <ClInclude Include="..\..\external\AppCommon\include\appcommon\xml\xml_handler.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\analysis_controller.h">
+    <ClInclude Include="..\..\include\onsag\analysis_controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\edit_pane.h">
+    <ClInclude Include="..\..\include\onsag\edit_pane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\file_handler.h">
+    <ClInclude Include="..\..\include\onsag\file_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\on_sag_app.h">
+    <ClInclude Include="..\..\include\onsag\on_sag_app.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\on_sag_config.h">
+    <ClInclude Include="..\..\include\onsag\on_sag_config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\on_sag_config_xml_handler.h">
+    <ClInclude Include="..\..\include\onsag\on_sag_config_xml_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\on_sag_doc.h">
+    <ClInclude Include="..\..\include\onsag\on_sag_doc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\on_sag_doc_commands.h">
+    <ClInclude Include="..\..\include\onsag\on_sag_doc_commands.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\on_sag_doc_xml_handler.h">
+    <ClInclude Include="..\..\include\onsag\on_sag_doc_xml_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\on_sag_frame.h">
+    <ClInclude Include="..\..\include\onsag\on_sag_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\on_sag_view.h">
+    <ClInclude Include="..\..\include\onsag\on_sag_printout.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\preferences_dialog.h">
+    <ClInclude Include="..\..\include\onsag\on_sag_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\profile_plot_pane.h">
+    <ClInclude Include="..\..\include\onsag\preferences_dialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\results_pane.h">
+    <ClInclude Include="..\..\include\onsag\profile_plot_options_dialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_cable.h">
+    <ClInclude Include="..\..\include\onsag\profile_plot_pane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_cable_unit_converter.h">
+    <ClInclude Include="..\..\include\onsag\results_pane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_cable_xml_handler.h">
+    <ClInclude Include="..\..\include\onsag\sag_cable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_method.h">
+    <ClInclude Include="..\..\include\onsag\sag_cable_unit_converter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_method_unit_converter.h">
+    <ClInclude Include="..\..\include\onsag\sag_cable_xml_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_method_xml_handler.h">
+    <ClInclude Include="..\..\include\onsag\sag_method.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_span.h">
+    <ClInclude Include="..\..\include\onsag\sag_method_unit_converter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_span_editor_dialog.h">
+    <ClInclude Include="..\..\include\onsag\sag_method_xml_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_span_unit_converter.h">
+    <ClInclude Include="..\..\include\onsag\sag_span.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_span_xml_handler.h">
+    <ClInclude Include="..\..\include\onsag\sag_span_editor_dialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_structure.h">
+    <ClInclude Include="..\..\include\onsag\sag_span_unit_converter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_structure_unit_converter.h">
+    <ClInclude Include="..\..\include\onsag\sag_span_xml_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sag_structure_xml_handler.h">
+    <ClInclude Include="..\..\include\onsag\sag_structure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\sagging_analysis_result.h">
+    <ClInclude Include="..\..\include\onsag\sag_structure_unit_converter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\span_sagger.h">
+    <ClInclude Include="..\..\include\onsag\sag_structure_xml_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\profile_plot_options_dialog.h">
+    <ClInclude Include="..\..\include\onsag\sagging_analysis_result.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\on_sag_printout.h">
+    <ClInclude Include="..\..\include\onsag\span_sagger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -175,97 +175,97 @@
 		<Unit filename="../../external/AppCommon/src/xml/xml_handler.cc">
 			<Option virtualFolder="Common Source Files/" />
 		</Unit>
-		<Unit filename="../../include/analysis_controller.h">
+		<Unit filename="../../include/onsag/analysis_controller.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/edit_pane.h">
+		<Unit filename="../../include/onsag/edit_pane.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/file_handler.h">
+		<Unit filename="../../include/onsag/file_handler.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/on_sag_app.h">
+		<Unit filename="../../include/onsag/on_sag_app.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/on_sag_config.h">
+		<Unit filename="../../include/onsag/on_sag_config.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/on_sag_config_xml_handler.h">
+		<Unit filename="../../include/onsag/on_sag_config_xml_handler.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/on_sag_doc.h">
+		<Unit filename="../../include/onsag/on_sag_doc.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/on_sag_doc_commands.h">
+		<Unit filename="../../include/onsag/on_sag_doc_commands.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/on_sag_doc_xml_handler.h">
+		<Unit filename="../../include/onsag/on_sag_doc_xml_handler.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/on_sag_frame.h">
+		<Unit filename="../../include/onsag/on_sag_frame.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/on_sag_printout.h">
+		<Unit filename="../../include/onsag/on_sag_printout.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/on_sag_view.h">
+		<Unit filename="../../include/onsag/on_sag_view.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/preferences_dialog.h">
+		<Unit filename="../../include/onsag/preferences_dialog.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/profile_plot_options_dialog.h">
+		<Unit filename="../../include/onsag/profile_plot_options_dialog.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/profile_plot_pane.h">
+		<Unit filename="../../include/onsag/profile_plot_pane.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/results_pane.h">
+		<Unit filename="../../include/onsag/results_pane.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_cable.h">
+		<Unit filename="../../include/onsag/sag_cable.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_cable_unit_converter.h">
+		<Unit filename="../../include/onsag/sag_cable_unit_converter.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_cable_xml_handler.h">
+		<Unit filename="../../include/onsag/sag_cable_xml_handler.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_method.h">
+		<Unit filename="../../include/onsag/sag_method.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_method_unit_converter.h">
+		<Unit filename="../../include/onsag/sag_method_unit_converter.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_method_xml_handler.h">
+		<Unit filename="../../include/onsag/sag_method_xml_handler.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_span.h">
+		<Unit filename="../../include/onsag/sag_span.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_span_editor_dialog.h">
+		<Unit filename="../../include/onsag/sag_span_editor_dialog.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_span_unit_converter.h">
+		<Unit filename="../../include/onsag/sag_span_unit_converter.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_span_xml_handler.h">
+		<Unit filename="../../include/onsag/sag_span_xml_handler.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_structure.h">
+		<Unit filename="../../include/onsag/sag_structure.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_structure_unit_converter.h">
+		<Unit filename="../../include/onsag/sag_structure_unit_converter.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sag_structure_xml_handler.h">
+		<Unit filename="../../include/onsag/sag_structure_xml_handler.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/sagging_analysis_result.h">
+		<Unit filename="../../include/onsag/sagging_analysis_result.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
-		<Unit filename="../../include/span_sagger.h">
+		<Unit filename="../../include/onsag/span_sagger.h">
 			<Option virtualFolder="Header Files/" />
 		</Unit>
 		<Unit filename="../../res/icon.ico">

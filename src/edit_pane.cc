@@ -1,18 +1,18 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "edit_pane.h"
+#include "onsag/edit_pane.h"
 
 #include <sstream>
 
 #include "models/base/helper.h"
 #include "wx/xrc/xmlres.h"
 
-#include "on_sag_app.h"
-#include "on_sag_doc.h"
-#include "on_sag_doc_commands.h"
-#include "sag_span_editor_dialog.h"
-#include "sag_span_unit_converter.h"
+#include "onsag/on_sag_app.h"
+#include "onsag/on_sag_doc.h"
+#include "onsag/on_sag_doc_commands.h"
+#include "onsag/sag_span_editor_dialog.h"
+#include "onsag/sag_span_unit_converter.h"
 #include "xpm/copy.xpm"
 #include "xpm/minus.xpm"
 #include "xpm/move_arrow_down.xpm"

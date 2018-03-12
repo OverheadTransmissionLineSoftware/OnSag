@@ -1,7 +1,7 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "sag_method.h"
+#include "onsag/sag_method.h"
 
 SagMethod::SagMethod() {
   end = SagMethod::SpanEndType::kNull;

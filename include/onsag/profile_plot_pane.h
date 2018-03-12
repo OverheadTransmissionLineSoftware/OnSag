@@ -10,8 +10,8 @@
 #include "models/transmissionline/catenary.h"
 #include "wx/docview.h"
 
-#include "on_sag_config.h"
-#include "sagging_analysis_result.h"
+#include "onsag/on_sag_config.h"
+#include "onsag/sagging_analysis_result.h"
 
 /// \par OVERVIEW
 ///

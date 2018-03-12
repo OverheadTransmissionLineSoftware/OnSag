@@ -15,9 +15,9 @@
 #include "models/sagging/transit_sagger.h"
 #include "models/transmissionline/catenary.h"
 
-#include "sag_cable.h"
-#include "sag_method.h"
-#include "sag_structure.h"
+#include "onsag/sag_cable.h"
+#include "onsag/sag_method.h"
+#include "onsag/sag_structure.h"
 
 /// \todo add control factor checks
 

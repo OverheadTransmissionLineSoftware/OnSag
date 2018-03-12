@@ -1,18 +1,18 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_SAGMETHODUNITCONVERTER_H_
-#define OTLS_ONSAG_SAGMETHODUNITCONVERTER_H_
+#ifndef OTLS_ONSAG_SAGSTRUCTUREUNITCONVERTER_H_
+#define OTLS_ONSAG_SAGSTRUCTUREUNITCONVERTER_H_
 
 #include "models/base/units.h"
 
-#include "sag_method.h"
+#include "onsag/sag_structure.h"
 
 /// \par OVERVIEW
 ///
-/// This class converts a sag method between unit systems as well as unit
+/// This class converts a sag structure between unit systems as well as unit
 /// styles.
-class SagMethodUnitConverter {
+class SagStructureUnitConverter {
  public:
   /// \brief Converts between unit styles.
   /// \param[in] system
@@ -21,26 +21,26 @@ class SagMethodUnitConverter {
   ///   The unit style to convert from.
   /// \param[in] style_to
   ///   The unit style to convert to.
-  /// \param[in,out] method
-  ///   The method to be converted.
+  /// \param[in,out] structure
+  ///   The structure to be converted.
   /// The 'different' style units are as follows:
-  ///  - position_transit = [m or ft]
+  ///  - position_attachment = [m or ft]
   static void ConvertUnitStyle(const units::UnitSystem& system,
                                const units::UnitStyle& style_from,
                                const units::UnitStyle& style_to,
-                               SagMethod& method);
+                               SagStructure& structure);
 
   /// \brief Converts between unit systems.
   /// \param[in] system_from
   ///   The unit system to convert from.
   /// \param[in] system_to
   ///   The unit system to convert to.
-  /// \param[in,out] method
-  ///   The method to be converted.
+  /// \param[in,out] structure
+  ///   The structure to be converted.
   /// This function requires the data in a 'consistent' unit style.
   static void ConvertUnitSystem(const units::UnitSystem& system_from,
                                 const units::UnitSystem& system_to,
-                                SagMethod& method);
+                                SagStructure& structure);
 };
 
-#endif  // OTLS_ONSAG_SAGMETHODUNITCONVERTER_H_
+#endif  // OTLS_ONSAG_SAGSTRUCTUREUNITCONVERTER_H_

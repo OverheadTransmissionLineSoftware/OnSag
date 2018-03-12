@@ -1,14 +1,14 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#include "file_handler.h"
+#include "onsag/file_handler.h"
 
 #include "appcommon/widgets/status_bar_log.h"
 #include "wx/filename.h"
 #include "wx/xml/xml.h"
 
-#include "on_sag_app.h"
-#include "on_sag_config_xml_handler.h"
+#include "onsag/on_sag_app.h"
+#include "onsag/on_sag_config_xml_handler.h"
 
 int FileHandler::LoadConfigFile(const std::string& filepath,
                                 OnSagConfig& config) {

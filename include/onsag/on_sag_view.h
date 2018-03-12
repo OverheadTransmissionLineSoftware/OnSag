@@ -6,9 +6,9 @@
 
 #include "wx/docview.h"
 
-#include "edit_pane.h"
-#include "profile_plot_pane.h"
-#include "results_pane.h"
+#include "onsag/edit_pane.h"
+#include "onsag/profile_plot_pane.h"
+#include "onsag/results_pane.h"
 
 /// \par OVERVIEW
 ///
