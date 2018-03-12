@@ -10,8 +10,8 @@ SagStructure::SagStructure() {
 SagStructure::~SagStructure() {
 }
 
-bool SagStructure::Validate(const bool& is_included_warnings,
-                       std::list<ErrorMessage>* messages) const {
+bool SagStructure::Validate(const bool& /**is_included_warnings**/,
+                            std::list<ErrorMessage>* messages) const {
   // initializes
   bool is_valid = true;
   ErrorMessage message;

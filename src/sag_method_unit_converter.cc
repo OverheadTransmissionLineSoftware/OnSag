@@ -4,10 +4,10 @@
 #include "sag_method_unit_converter.h"
 
 void SagMethodUnitConverter::ConvertUnitStyle(
-    const units::UnitSystem& system,
+    const units::UnitSystem& /**system**/,
     const units::UnitStyle& style_from,
     const units::UnitStyle& style_to,
-    SagMethod& method) {
+    SagMethod& /**method**/) {
   if (style_from == style_to) {
     return;
   }

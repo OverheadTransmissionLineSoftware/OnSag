@@ -44,10 +44,8 @@ SpanSagger::~SpanSagger() {
 
 double SpanSagger::AngleTransit() const {
   // updates class if necessary
-  if (IsUpdated() == false) {
-    if (Update() == false) {
-      return -999999;
-    }
+  if ((IsUpdated() == false) && (Update() == false)) {
+    return -999999;
   }
 
   // returns valid answer if method type is correct
@@ -60,10 +58,8 @@ double SpanSagger::AngleTransit() const {
 
 Catenary3d SpanSagger::Catenary() const {
   // updates class if necessary
-  if (IsUpdated() == false) {
-    if (Update() == false) {
-      return Catenary3d();
-    }
+  if ((IsUpdated() == false) && (Update() == false)) {
+    return Catenary3d();
   }
 
   return catenary_;
@@ -71,10 +67,8 @@ Catenary3d SpanSagger::Catenary() const {
 
 AxisDirectionType SpanSagger::DirectionTransit() const {
   // updates class if necessary
-  if (IsUpdated() == false) {
-    if (Update() == false) {
-      return AxisDirectionType::kNull;
-    }
+  if ((IsUpdated() == false) && (Update() == false)) {
+    return AxisDirectionType::kNull;
   }
 
   // returns valid answer if method type is correct
@@ -93,10 +87,8 @@ AxisDirectionType SpanSagger::DirectionTransit() const {
 
 double SpanSagger::DistanceAttachmentToTarget() const {
   // updates class if necessary
-  if (IsUpdated() == false) {
-    if (Update() == false) {
-      return -999999;
-    }
+  if ((IsUpdated() == false) && (Update() == false)) {
+    return -999999;
   }
 
   // returns valid answer if method type is correct
@@ -118,10 +110,8 @@ double SpanSagger::DistanceAttachmentToTarget() const {
 
 double SpanSagger::FactorControl() const {
   // updates class if necessary
-  if (IsUpdated() == false) {
-    if (Update() == false) {
-      return -999999;
-    }
+  if ((IsUpdated() == false) && (Update() == false)) {
+    return -999999;
   }
 
   // returns valid answer if method type is correct
@@ -134,10 +124,8 @@ double SpanSagger::FactorControl() const {
 
 Point2d<double> SpanSagger::PointTarget() const {
   // updates class if necessary
-  if (IsUpdated() == false) {
-    if (Update() == false) {
-      return Point2d<double>();
-    }
+  if ((IsUpdated() == false) && (Update() == false)) {
+    return Point2d<double>();
   }
 
   // returns valid answer if method type is correct
@@ -150,10 +138,8 @@ Point2d<double> SpanSagger::PointTarget() const {
 
 double SpanSagger::TensionDyno() const {
   // updates class if necessary
-  if (IsUpdated() == false) {
-    if (Update() == false) {
-      return -999999;
-    }
+  if ((IsUpdated() == false) && (Update() == false)) {
+    return -999999;
   }
 
   // returns valid answer if method type is correct
@@ -166,10 +152,8 @@ double SpanSagger::TensionDyno() const {
 
 double SpanSagger::TimeStopwatch() const {
   // updates class if necessary
-  if (IsUpdated() == false) {
-    if (Update() == false) {
-      return -999999;
-    }
+  if ((IsUpdated() == false) && (Update() == false)) {
+    return -999999;
   }
 
   // returns valid answer if method type is correct
@@ -182,7 +166,7 @@ double SpanSagger::TimeStopwatch() const {
 
 /// This method depends on the most of the data being checked in the
 /// SagSpan::Validate() method.
-bool SpanSagger::Validate(const bool& is_included_warnings,
+bool SpanSagger::Validate(const bool& /**is_included_warnings**/,
                           std::list<ErrorMessage>* messages) const {
   // initializes
   bool is_valid = true;
@@ -259,10 +243,10 @@ bool SpanSagger::Validate(const bool& is_included_warnings,
   // validates update process
   if (Update() == false) {
     is_valid = false;
-    if ((messages != nullptr) & (is_updated_catenary_ == false)) {
+    if ((messages != nullptr) && (is_updated_catenary_ == false)) {
       message.description = "Couldn't solve for a catenary.";
       messages->push_back(message);
-    } else if ((messages != nullptr) & (is_updated_sagger_ == false)) {
+    } else if ((messages != nullptr) && (is_updated_sagger_ == false)) {
       // can safely display transit message here because the other sagging
       // methods should pass if a catenary is solved
       message.description = "Couldn't solve for a sagging solution. Try "
@@ -336,11 +320,7 @@ units::UnitSystem SpanSagger::units() const {
 }
 
 bool SpanSagger::IsUpdated() const {
-  if ((is_updated_catenary_ == true) && (is_updated_sagger_ == true)) {
-    return true;
-  } else {
-    return false;
-  }
+  return (is_updated_catenary_ == true) && (is_updated_sagger_ == true);
 }
 
 bool SpanSagger::IsValidControlFactor(const double& factor_control) const {
@@ -379,11 +359,7 @@ bool SpanSagger::IsValidControlFactor(const double& factor_control) const {
                                 point_end.x, point_end.y, point_min.x);
 
   // compares and returns
-  if (point_min.y <= factor_control) {
-    return true;
-  } else {
-    return false;
-  }
+  return point_min.y <= factor_control;
 }
 
 double SpanSagger::TensionHorizontalPolynomialFitted(
