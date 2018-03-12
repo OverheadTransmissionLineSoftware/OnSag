@@ -33,6 +33,10 @@
 *.log
 docs/html/*
 
+# oclint generated files #
+##########################
+check/*.html
+
 # generated resources #
 #######################
 build/codeblocks/debug/res/*
@@ -42,7 +46,7 @@ build/msvc/Release/res/*
 res/resources.cc
 
 # generated executables #
-######################################
+#########################
 *.exe
 build/codeblocks/debug/OnSag
 build/codeblocks/release/OnSag
