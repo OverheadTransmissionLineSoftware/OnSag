@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_ONSAGFRAME_H_
-#define OTLS_ONSAG_ONSAGFRAME_H_
+#ifndef ONSAG_ON_SAG_FRAME_H_
+#define ONSAG_ON_SAG_FRAME_H_
 
 #include "appcommon/widgets/log_pane.h"
 #include "wx/aui/framemanager.h"
@@ -94,4 +94,4 @@ class OnSagFrame : public wxDocParentFrame {
   DECLARE_EVENT_TABLE()
 };
 
-#endif  // OTLS_ONSAG_ONSAGFRAME_H_
+#endif  // ONSAG_ON_SAG_FRAME_H_

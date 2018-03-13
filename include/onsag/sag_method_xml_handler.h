@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_SAGMETHODXMLHANDLER_H_
-#define OTLS_ONSAG_SAGMETHODXMLHANDLER_H_
+#ifndef ONSAG_SAG_METHOD_XML_HANDLER_H_
+#define ONSAG_SAG_METHOD_XML_HANDLER_H_
 
 #include <string>
 
@@ -77,4 +77,4 @@ class SagMethodXmlHandler : public XmlHandler {
                           SagMethod& method);
 };
 
-#endif  // OTLS_ONSAG_SAGMETHODXMLHANDLER_H_
+#endif  // ONSAG_SAG_METHOD_XML_HANDLER_H_

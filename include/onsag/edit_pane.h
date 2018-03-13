@@ -1,8 +1,10 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_EDITPANE_H_
-#define OTLS_ONSAG_EDITPANE_H_
+#ifndef ONSAG_EDIT_PANE_H_
+#define ONSAG_EDIT_PANE_H_
+
+#include <list>
 
 #include "wx/docview.h"
 #include "wx/treectrl.h"
@@ -181,4 +183,4 @@ class EditPane : public wxPanel {
   DECLARE_EVENT_TABLE()
 };
 
-# endif  // OTLS_ONSAG_EDITPANE_H_
+#endif  // ONSAG_EDIT_PANE_H_

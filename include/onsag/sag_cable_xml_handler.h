@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_SAGCABLEXMLHANDLER_H_
-#define OTLS_ONSAG_SAGCABLEXMLHANDLER_H_
+#ifndef ONSAG_SAG_CABLE_XML_HANDLER_H_
+#define ONSAG_SAG_CABLE_XML_HANDLER_H_
 
 #include <string>
 
@@ -108,4 +108,4 @@ class SagCableXmlHandler : public XmlHandler {
                           SagCable& cable);
 };
 
-#endif  // OTLS_ONSAG_SAGCABLEXMLHANDLER_H_
+#endif  // ONSAG_SAG_CABLE_XML_HANDLER_H_

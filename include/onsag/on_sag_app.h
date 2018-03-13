@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_ONSAGAPP_H_
-#define OTLS_ONSAG_ONSAGAPP_H_
+#ifndef ONSAG_ON_SAG_APP_H_
+#define ONSAG_ON_SAG_APP_H_
 
 #include <string>
 
@@ -104,7 +104,7 @@ class OnSagApp : public wxApp {
 };
 
 /// This is an array of command line options.
-static const wxCmdLineEntryDesc cmd_line_desc [] = {
+static const wxCmdLineEntryDesc cmd_line_desc[] = {
   {wxCMD_LINE_SWITCH, nullptr, "help", "shows this help message",
       wxCMD_LINE_VAL_NONE, wxCMD_LINE_OPTION_HELP},
   {wxCMD_LINE_OPTION, nullptr, "config", "the application configuration file",
@@ -117,4 +117,4 @@ static const wxCmdLineEntryDesc cmd_line_desc [] = {
 
 DECLARE_APP(OnSagApp)
 
-#endif  // OTLS_ONSAG_ONSAGAPP_H_
+#endif  // ONSAG_ON_SAG_APP_H_

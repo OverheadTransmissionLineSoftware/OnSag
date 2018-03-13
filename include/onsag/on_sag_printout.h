@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_ONSAGPRINTOUT_H_
-#define OTLS_ONSAG_ONSAGPRINTOUT_H_
+#ifndef ONSAG_ON_SAG_PRINTOUT_H_
+#define ONSAG_ON_SAG_PRINTOUT_H_
 
 #include "wx/print.h"
 
@@ -22,7 +22,7 @@ class OnSagPrintout : public wxPrintout {
   /// \brief Constructor.
   /// \param[in] view
   ///   The view.
-  OnSagPrintout(OnSagView* view);
+  explicit OnSagPrintout(OnSagView* view);
 
   /// \brief Destructor.
   virtual ~OnSagPrintout();
@@ -36,20 +36,20 @@ class OnSagPrintout : public wxPrintout {
   ///   The start of the required print range.
   /// \param[in] to
   ///   The end of the required print range.
-  virtual void GetPageInfo(int* min, int* max, int* from, int* to) override;
+  void GetPageInfo(int* min, int* max, int* from, int* to) override;
 
   /// \brief Determines if the page number is present.
   /// \param[in] number
   ///   The page number.
   /// \return If the page number is present.
   /// The page numbers start at 1 (as opposed to 0).
-  virtual bool HasPage(int number) override;
+  bool HasPage(int number) override;
 
   /// \brief Prints the page.
   /// \param[in] number
   ///   The page number.
   /// \return If the print job should continue.
-  virtual bool OnPrintPage(int number) override;
+  bool OnPrintPage(int number) override;
 
  protected:
   /// \var view_
@@ -57,4 +57,4 @@ class OnSagPrintout : public wxPrintout {
   OnSagView* view_;
 };
 
-#endif  // OTLS_ONSAG_ONSAGPRINTOUT_H_
+#endif  // ONSAG_ON_SAG_PRINTOUT_H_

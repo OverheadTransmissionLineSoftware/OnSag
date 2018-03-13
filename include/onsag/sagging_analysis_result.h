@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONGSAG_SAGGINGANALYSISRESULT_H_
-#define OTLS_ONGSAG_SAGGINGANALYSISRESULT_H_
+#ifndef ONSAG_SAGGING_ANALYSIS_RESULT_H_
+#define ONSAG_SAGGING_ANALYSIS_RESULT_H_
 
 #include "models/base/point.h"
 #include "models/transmissionline/catenary.h"
@@ -62,4 +62,4 @@ struct SaggingAnalysisResult {
   double time_stopwatch;
 };
 
-#endif  // OTLS_ONGSAG_SAGGINGANALYSISRESULT_H_
+#endif  // ONSAG_SAGGING_ANALYSIS_RESULT_H_

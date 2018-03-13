@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_SPANSAGGER_H_
-#define OTLS_ONSAG_SPANSAGGER_H_
+#ifndef ONSAG_SPAN_SAGGER_H_
+#define ONSAG_SPAN_SAGGER_H_
 
 #include <list>
 #include <string>
@@ -263,4 +263,4 @@ class SpanSagger {
   units::UnitSystem units_;
 };
 
-#endif  // OTLS_ONSAG_SPANSAGGER_H_
+#endif  // ONSAG_SPAN_SAGGER_H_

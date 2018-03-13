@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_SAGSTRUCTURE_H_
-#define OTLS_ONSAG_SAGSTRUCTURE_H_
+#ifndef ONSAG_SAG_STRUCTURE_H_
+#define ONSAG_SAG_STRUCTURE_H_
 
 #include <list>
 #include <string>
@@ -44,4 +44,4 @@ struct SagStructure {
   std::string name;
 };
 
-#endif  // OTLS_ONSAG_SAGSTRUCTURE_H_
+#endif  // ONSAG_SAG_STRUCTURE_H_

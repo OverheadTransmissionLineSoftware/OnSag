@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_SAGSPANEDITORDIALOG_H_
-#define OTLS_ONSAG_SAGSPANEDITORDIALOG_H_
+#ifndef ONSAG_SAG_SPAN_EDITOR_DIALOG_H_
+#define ONSAG_SAG_SPAN_EDITOR_DIALOG_H_
 
 #include "models/base/units.h"
 #include "wx/wx.h"
@@ -113,4 +113,4 @@ class SagSpanEditorDialog : public wxDialog {
   DECLARE_EVENT_TABLE()
 };
 
-#endif  // OTLS_ONSAG_SAGSPANEDITORDIALOG_H_
+#endif  // ONSAG_SAG_SPAN_EDITOR_DIALOG_H_

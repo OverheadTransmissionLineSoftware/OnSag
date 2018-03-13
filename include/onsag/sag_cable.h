@@ -1,13 +1,13 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_SAGCABLE_H_
-#define OTLS_ONSAG_SAGCABLE_H_
+#ifndef ONSAG_SAG_CABLE_H_
+#define ONSAG_SAG_CABLE_H_
 
 #include <list>
 #include <string>
 
-#include "onsag/models/base/error_message.h"
+#include "models/base/error_message.h"
 
 /// \par OVERVIEW
 ///
@@ -73,4 +73,4 @@ struct SagCable {
   double weight_unit;
 };
 
-#endif  // OTLS_ONSAG_SAGCABLE_H_
+#endif  // ONSAG_SAG_CABLE_H_

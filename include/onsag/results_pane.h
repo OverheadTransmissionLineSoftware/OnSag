@@ -1,14 +1,16 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_RESULTSPANE_H_
-#define OTLS_ONSAG_RESULTSPANE_H_
+#ifndef ONSAG_RESULTS_PANE_H_
+#define ONSAG_RESULTS_PANE_H_
+
+#include <list>
 
 #include "appcommon/widgets/report_table.h"
 #include "wx/docview.h"
 #include "wx/wx.h"
 
-#include "sonsag/agging_analysis_result.h"
+#include "onsag/sagging_analysis_result.h"
 
 /// \par OVERVIEW
 ///
@@ -73,4 +75,4 @@ class ResultsPane : public wxPanel {
   DECLARE_EVENT_TABLE()
 };
 
-# endif  // OTLS_ONSAG_RESULTSPANE_H_
+#endif  // ONSAG_RESULTS_PANE_H_

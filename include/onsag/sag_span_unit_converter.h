@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_SAGSPANUNITCONVERTER_H_
-#define OTLS_ONSAG_SAGSPANUNITCONVERTER_H_
+#ifndef ONSAG_SAG_SPAN_UNIT_CONVERTER_H_
+#define ONSAG_SAG_SPAN_UNIT_CONVERTER_H_
 
 #include "models/base/units.h"
 
@@ -43,4 +43,4 @@ class SagSpanUnitConverter {
                                 SagSpan& span);
 };
 
-#endif  // OTLS_ONSAG_SAGSPANUNITCONVERTER_H_
+#endif  // ONSAG_SAG_SPAN_UNIT_CONVERTER_H_

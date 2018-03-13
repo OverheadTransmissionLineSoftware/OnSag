@@ -86,7 +86,7 @@ bool OnSagDocXmlHandler::ParseNodeV1(
     if (title == "sag_spans") {
       // parses each span xml node
       const wxXmlNode* sub_node = node->GetChildren();
-      while(sub_node != nullptr) {
+      while (sub_node != nullptr) {
         wxString sub_title = sub_node->GetName();
         if (sub_title == "sag_span") {
           // creates new span and parses node

@@ -257,7 +257,7 @@ bool SpanSagger::Validate(const bool& /**is_included_warnings**/,
     return is_valid;
   }
 
- return is_valid;
+  return is_valid;
 }
 
 const SagCable* SpanSagger::cable() const {

@@ -1,8 +1,12 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_ONSAGDOC_H_
-#define OTLS_ONSAG_ONSAGDOC_H_
+#ifndef ONSAG_ON_SAG_DOC_H_
+#define ONSAG_ON_SAG_DOC_H_
+
+#include <list>
+#include <string>
+#include <vector>
 
 #include "wx/docview.h"
 
@@ -22,19 +26,19 @@ class UpdateHint : public wxObject {
   };
 
   /// \brief Default Constructor.
-  UpdateHint() {};
+  UpdateHint() {}
 
   /// \brief Alternate constructor.
-  UpdateHint(Type hint) {type_ = hint;};
+  UpdateHint(Type hint) {type_ = hint;}
 
   /// \brief Sets the hint type.
   /// \param[in] type
   ///   The hint type.
-  void set_type(const Type& type) {type_ = type;};
+  void set_type(const Type& type) {type_ = type;}
 
   /// \brief Gets the hint type.
   /// \return The hint type.
-  const Type& type() const {return type_;};
+  const Type& type() const {return type_;}
 
  private:
   /// \var type_
@@ -247,4 +251,4 @@ class OnSagDoc : public wxDocument {
   wxDECLARE_DYNAMIC_CLASS(OnSagDoc);
 };
 
-#endif  // OTLS_ONSAG_ONSAGDOC_H_
+#endif  // ONSAG_ON_SAG_DOC_H_

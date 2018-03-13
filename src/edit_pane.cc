@@ -249,9 +249,6 @@ void EditPane::CopySpan(const wxTreeItemId& id) {
     str_base = str + " ";
   } else {
     str_base = str.substr(0, pos_start);
-    //if (str_base.back() == ' ') {
-    //  str_base.pop_back();
-    //}
   }
 
   // determines a unique description for the span
@@ -381,8 +378,7 @@ void EditPane::FocusTreeCtrlSpanItem(const int& index) {
   for (auto i = 0; i <= index; i++) {
     if (i == 0) {
       id = treectrl_->GetFirstChild(treectrl_->GetRootItem(), cookie);
-    }
-    else {
+    } else {
       id = treectrl_->GetNextSibling(id);
     }
   }
@@ -626,7 +622,7 @@ void EditPane::OnItemMenu(wxTreeEvent& event) {
   wxMenu menu;
   if (id == treectrl_->GetRootItem()) {
     menu.Append(kTreeRootAdd, "Add Span");
-  } else { // a span is selected
+  } else {  // a span is selected
     if (is_activated == false) {
       menu.Append(kTreeItemActivate, "Activate");
     } else {

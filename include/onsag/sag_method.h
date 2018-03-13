@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_SAGMETHOD_H_
-#define OTLS_ONSAG_SAGMETHOD_H_
+#ifndef ONSAG_SAG_METHOD_H_
+#define ONSAG_SAG_METHOD_H_
 
 #include <list>
 
@@ -69,4 +69,4 @@ struct SagMethod {
   int wave_return;
 };
 
-#endif  // OTLS_ONSAG_SAGMETHOD_H_
+#endif  // ONSAG_SAG_METHOD_H_

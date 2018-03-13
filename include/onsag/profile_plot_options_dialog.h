@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_PROFILEPLOTOPTIONSDIALOG_H_
-#define OTLS_ONSAG_PROFILEPLOTOPTIONSDIALOG_H_
+#ifndef ONSAG_PROFILE_PLOT_OPTIONS_DIALOG_H_
+#define ONSAG_PROFILE_PLOT_OPTIONS_DIALOG_H_
 
 #include "wx/wx.h"
 
@@ -63,4 +63,4 @@ class ProfilePlotOptionsDialog : public wxDialog {
   DECLARE_EVENT_TABLE()
 };
 
-# endif  // OTLS_ONSAG_PROFILEPLOTOPTIONSDIALOG_H_
+#endif  // ONSAG_PROFILE_PLOT_OPTIONS_DIALOG_H_

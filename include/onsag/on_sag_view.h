@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_ONSAGVIEW_H_
-#define OTLS_ONSAG_ONSAGVIEW_H_
+#ifndef ONSAG_ON_SAG_VIEW_H_
+#define ONSAG_ON_SAG_VIEW_H_
 
 #include "wx/docview.h"
 
@@ -140,4 +140,4 @@ class OnSagView : public wxView {
   DECLARE_EVENT_TABLE()
 };
 
-#endif  // OTLS_ONSAG_ONSAGVIEW_H_
+#endif  // ONSAG_ON_SAG_VIEW_H_

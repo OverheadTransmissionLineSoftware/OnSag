@@ -170,7 +170,7 @@ bool SagCableXmlHandler::ParseNode(
   return node_root;
 }
 
- bool SagCableXmlHandler::ParseNodeTensionPoint(
+bool SagCableXmlHandler::ParseNodeTensionPoint(
     const wxXmlNode* root,
     const std::string& filepath,
     SagCable::TensionPoint& point) {

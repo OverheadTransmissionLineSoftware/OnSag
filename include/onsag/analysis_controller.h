@@ -1,9 +1,10 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_ANALYSISCONTROLLER_H_
-#define OTLS_ONSAG_ANALYSISCONTROLLER_H_
+#ifndef ONSAG_ANALYSIS_CONTROLLER_H_
+#define ONSAG_ANALYSIS_CONTROLLER_H_
 
+#include <list>
 #include <vector>
 
 #include "wx/wx.h"
@@ -175,4 +176,4 @@ class AnalysisController {
   std::list<double> temperatures_;
 };
 
-#endif  // OTLS_ONSAG_ANALYSISCONTROLLER_H_
+#endif  // ONSAG_ANALYSIS_CONTROLLER_H_

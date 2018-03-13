@@ -1,8 +1,8 @@
 // This is free and unencumbered software released into the public domain.
 // For more information, please refer to <http://unlicense.org/>
 
-#ifndef OTLS_ONSAG_SAGSPAN_H_
-#define OTLS_ONSAG_SAGSPAN_H_
+#ifndef ONSAG_SAG_SPAN_H_
+#define ONSAG_SAG_SPAN_H_
 
 #include <list>
 #include <string>
@@ -68,4 +68,4 @@ struct SagSpan {
   double temperature_interval;
 };
 
-#endif  // OTLS_ONSAG_SAGSPAN_H_
+#endif  // ONSAG_SAG_SPAN_H_
