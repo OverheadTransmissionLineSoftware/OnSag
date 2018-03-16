@@ -106,11 +106,9 @@ bool OnSagView::OnCreate(wxDocument *doc, long flags) {
 
   info = wxAuiPaneInfo();
   info.Name("Results");
-  info.BestSize(300, 700);
   info.Caption("Results");
   info.CloseButton(false);
   info.Floatable(false);
-  info.MinSize(150, 350);
   info.Top();
   pane_results_ = new ResultsPane(frame, this);
   manager->AddPane(pane_results_, info);
