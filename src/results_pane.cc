@@ -155,7 +155,7 @@ void ResultsPane::UpdateReportDataDyno(
   header.width = wxLIST_AUTOSIZE;
   data_.headers.push_back(header);
 
-  header.title = "Td";
+  header.title = "T";
   header.format = wxLIST_FORMAT_CENTER;
   header.width = wxLIST_AUTOSIZE;
   data_.headers.push_back(header);
