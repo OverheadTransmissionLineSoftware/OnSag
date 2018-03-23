@@ -1,0 +1,26 @@
+<ul>
+  <li>
+    <object type="text/sitemap">
+      <param name="Name" value="Cable Modeling"></param>
+      <param name="Local" value="cable_modeling.html"></param>
+    </object>
+  </li>
+  <li>
+    <object type="text/sitemap">
+      <param name="Name" value="Transit Sagging"></param>
+      <param name="Local" value="transit_sagging.html"></param>
+    </object>
+  </li>
+  <li>
+    <object type="text/sitemap">
+      <param name="Name" value="Dynamometer Sagging"></param>
+      <param name="Local" value="dynamometer_sagging.html"></param>
+    </object>
+  </li>
+  <li>
+    <object type="text/sitemap">
+      <param name="Name" value="Stopwatch Sagging"></param>
+      <param name="Local" value="stopwatch_sagging.html"></param>
+    </object>
+  </li>
+</ul>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editing Sag Spans</title>
+</head>
+<body>
+  <h1>Editing Sag Spans</h1>
+  <p>
+    Sag span data is stored in a document (.onsag) file. Editing starts in the
+    Edit Pane. Sag spans can be added, removed, copied, modified, or moved
+    within the list.
+  </p>
+  <p>
+    To trigger an editing action, either:
+    <ul>
+      <li>Select a sag span and click a button in the edit pane.</li>
+      <li>Right click on a sag span and select a menu entry.</li>
+    </ul>
+  </p>
+  <h3>Sag Span Editor</h3>
+  <p>
+    The sag span editor is launched when an individual sag span needs to be
+    edited. There are multiple tabs for the data.
+  </p>
+  <h5>Cable</h5>
+  <img src="sag_span_editor_dialog_cable.png" alt="" />
+  <p>
+    This tab shows all cable related information.
+  </p>
+  <p>
+    Five (5) entries are provided for entering cable tension. All of the entries
+    need to be filled. For cables that are sensitive to temperature, the
+    horizontal tensions should decrease. For cables that maintain a constant
+    tension for all temperatures, enter multiple temperatures but keep the same
+    tension. Additional information is provided in the Calculations->Catenary
+    help entry.
+  </p>
+  <p>
+    The corrections allow the cable tension to be modified from the above
+    entered values. Additional information is provided in the
+    Calculations->Catenary help entry.
+  </p>
+  <br />
+  <h5>Structures</h5>
+  <img src="sag_span_editor_dialog_structures.png" alt="" />
+  <p>
+    This tab shows all structure related information.
+  </p>
+  <p>
+    The structure and attachment are for documentation purposes, and don't
+    affect the analysis.
+  </p>
+  <p>
+    A single attachment position is modeled for the structure. The X entry is
+    the horizontal position and Y entry is vertical position.
+  </p>
+  <h5>Sagging</h5>
+  <img src="sag_span_editor_dialog_sagging.png" alt="" />
+  <p>
+    This tab shows all sagging method related information.
+  </p>
+  <p>
+    A method is selected using the leftmost control. Once selected, options for
+    the specific sag method are unlocked for editing.
+    <ul>
+      <li>
+        Transit - Additional information is provided in the
+        Calculations->Transit Sagging help entry.
+      </li>
+      <li>
+        Dynamometer - Additional information is provided in the
+        Calculations->Dynamometer Sagging help entry.
+      </li>
+      <li>
+        Stopwatch - Additional information is provided in the
+        Calculations->Stopwatch Sagging help entry.
+      </li>
+    </ul>
+  </p>
+  <p>
+    The Temperature section is where the sagging temperatures are set. The base
+    temperature is the expected/average temperature for the day, while the
+    interval temperature sets the temperature range. A total of five (5) sagging
+    temperatures are calculated:
+    <ul>
+      <li>Sagging Temp 1 = Base Temp - (2 x Interval Temp)</li>
+      <li>Sagging Temp 2 = Base Temp - (1 x Interval Temp)</li>
+      <li>Sagging Temp 3 = Base Temp</li>
+      <li>Sagging Temp 4 = Base Temp + (1 x Interval Temp)</li>
+      <li>Sagging Temp 5 = Base Temp + (2 x Interval Temp)</li>
+    </ul>
+   </p>
+  <h5>Notes</h5>
+  <img src="sag_span_editor_dialog_notes.png" alt="" />
+  <p>
+    This tab is used for adding notes for the sag span. Names of the
+    sagger/checker, reference drawings, and assumptions could be useful to
+    track.
+  </p>
+</body>
+</html>

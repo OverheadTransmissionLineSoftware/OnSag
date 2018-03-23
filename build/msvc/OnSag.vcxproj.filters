@@ -37,6 +37,9 @@
     <Filter Include="Test">
       <UniqueIdentifier>{16473afd-d473-4f6d-9176-a9e95a1f1872}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Help">
+      <UniqueIdentifier>{c557d532-69fd-4f50-9887-df66dfd40445}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\data_set_2d.h">
@@ -235,6 +238,78 @@
     </None>
     <None Include="..\..\res\xrc\profile_plot_options_dialog.xrc">
       <Filter>Resource Files\XRC</Filter>
+    </None>
+    <None Include="..\..\res\help\calculations\cable_modeling.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\calculations\calculations.hhc">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\calculations\calculations.hhk">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\calculations\calculations.hhp">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\calculations\dynamometer_sagging.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\calculations\stopwatch_sagging.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\calculations\transit_sagging.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\analyzing_a_span.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\application_files.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\editing_sag_spans.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\errors.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\interface.hhc">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\interface.hhk">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\interface.hhp">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\plot.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\printing.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\reports.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\interface\windows.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\overview\introduction.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\overview\license.html">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\overview\overview.hhc">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\overview\overview.hhk">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\overview\overview.hhp">
+      <Filter>Resource Files\Help</Filter>
+    </None>
+    <None Include="..\..\res\help\overview\technical_support.html">
+      <Filter>Resource Files\Help</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

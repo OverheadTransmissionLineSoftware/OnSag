@@ -8,6 +8,7 @@
 
 #include "wx/cmdline.h"
 #include "wx/docview.h"
+#include "wx/html/helpctrl.h"
 #include "wx/wx.h"
 
 #include "onsag/on_sag_config.h"
@@ -67,6 +68,10 @@ class OnSagApp : public wxApp {
   /// \return The main application frame.
   OnSagFrame* frame();
 
+  /// \brief Gets the help controller.
+  /// \return The help controller.
+  wxHtmlHelpController* help();
+
   /// \brief Gets the document manager.
   /// \return The document manager.
   wxDocManager* manager_doc();
@@ -93,6 +98,10 @@ class OnSagApp : public wxApp {
   /// \var frame_
   ///   The main application frame.
   OnSagFrame* frame_;
+
+  /// \var help_
+  ///   The help controller.
+  wxHtmlHelpController* help_;
 
   /// \var manager_doc_
   ///   The document manager.

@@ -5,6 +5,7 @@
 
 #include "appcommon/widgets/status_bar_log.h"
 #include "wx/filename.h"
+#include "wx/fs_zip.h"
 #include "wx/stdpaths.h"
 #include "wx/xrc/xmlres.h"
 
@@ -86,6 +87,7 @@ int OnSagApp::OnExit() {
 
   // cleans up allocated resources
   delete config_.data_page;
+  delete help_;
   delete manager_doc_;
 
   // continues exit process
@@ -161,6 +163,48 @@ bool OnSagApp::OnInit() {
     wxLog::SetVerbose(true);
   }
 
+  // creates help controller and adds content
+  help_ = new wxHtmlHelpController(wxHF_DEFAULT_STYLE);
+  wxInitAllImageHandlers();
+  wxFileSystem::AddHandler(new wxZipFSHandler);
+
+  filename = wxStandardPaths::Get().GetExecutablePath();
+  filename.AppendDir("res");
+  filename.SetExt("htb");
+
+  filename.SetName("overview");
+  if (filename.Exists() == true) {
+    if (help_->AddBook(filename) == false) {
+      wxLogError("Couldn't load overview help manual.");
+    }
+  } else {
+    wxLogError("Overview help manual file doesn't exist. Needs to be located "
+               "at: "
+               + filename.GetFullPath());
+  }
+
+  filename.SetName("interface");
+  if (filename.Exists() == true) {
+    if (help_->AddBook(filename) == false) {
+      wxLogError("Couldn't load interface help manual.");
+    }
+  } else {
+    wxLogError("Interface help manual file doesn't exist. Needs to be located "
+               "at: "
+               + filename.GetFullPath());
+  }
+
+  filename.SetName("calculations");
+  if (filename.Exists() == true) {
+    if (help_->AddBook(filename) == false) {
+      wxLogError("Couldn't load calculations help manual.");
+    }
+  } else {
+    wxLogError("Calculations help manual file doesn't exist. Needs to be "
+               " located at: "
+               + filename.GetFullPath());
+  }
+
   // sets application frame based on config setting
   // this needs to be done before any messages are shown
   frame_->SetSize(config_.size_frame);
@@ -196,6 +240,10 @@ OnSagConfig* OnSagApp::config() {
 
 OnSagFrame* OnSagApp::frame() {
   return frame_;
+}
+
+wxHtmlHelpController* OnSagApp::help() {
+  return help_;
 }
 
 wxDocManager* OnSagApp::manager_doc() {

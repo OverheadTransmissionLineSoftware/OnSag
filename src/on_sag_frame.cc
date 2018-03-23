@@ -53,6 +53,7 @@ BEGIN_EVENT_TABLE(OnSagFrame, wxDocParentFrame)
   EVT_MENU(XRCID("menuitem_file_pagesetup"), OnSagFrame::OnMenuFilePageSetup)
   EVT_MENU(XRCID("menuitem_file_preferences"), OnSagFrame::OnMenuFilePreferences)
   EVT_MENU(XRCID("menuitem_help_about"), OnSagFrame::OnMenuHelpAbout)
+  EVT_MENU(XRCID("menuitem_help_manual"), OnSagFrame::OnMenuHelpManual)
   EVT_MENU(XRCID("menuitem_view_log"), OnSagFrame::OnMenuViewLog)
   EVT_SIZE(OnSagFrame::OnResize)
 END_EVENT_TABLE()
@@ -174,6 +175,11 @@ void OnSagFrame::OnMenuHelpAbout(wxCommandEvent& event) {
 
   // shows the dialog
   wxAboutBox(info, this);
+}
+
+void OnSagFrame::OnMenuHelpManual(wxCommandEvent& event) {
+  wxHtmlHelpController* help = wxGetApp().help();
+  help->DisplayContents();
 }
 
 void OnSagFrame::OnMenuViewLog(wxCommandEvent& event) {
