@@ -136,6 +136,20 @@ Point2d<double> SpanSagger::PointTarget() const {
   }
 }
 
+double SpanSagger::SpeedWave() const {
+  // updates class if necessary
+  if ((IsUpdated() == false) && (Update() == false)) {
+    return -999999;
+  }
+
+  // returns valid answer if method type is correct
+  if (method_->type == SagMethod::Type::kStopWatch) {
+    return sagger_stopwatch_.VelocityWave();
+  } else {
+    return -999999;
+  }
+}
+
 double SpanSagger::TensionDyno() const {
   // updates class if necessary
   if ((IsUpdated() == false) && (Update() == false)) {

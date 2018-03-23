@@ -86,6 +86,10 @@ class SpanSagger {
   /// method is used.
   Point2d<double> PointTarget() const;
 
+  /// \brief Gets the traveling wave speed.
+  /// \return The traveling wave speed.
+  double SpeedWave() const;
+
   /// \brief Gets the dynamometer tension.
   /// \return The dynamometer tension.
   /// This method will only return a valid answer if the dynamometer sagging

@@ -219,6 +219,16 @@ void ResultsPane::UpdateReportDataStopwatch(
   header.width = wxLIST_AUTOSIZE;
   data_.headers.push_back(header);
 
+  header.title = "WS";
+  header.format = wxLIST_FORMAT_CENTER;
+  header.width = wxLIST_AUTOSIZE;
+  data_.headers.push_back(header);
+
+  header.title = "L";
+  header.format = wxLIST_FORMAT_CENTER;
+  header.width = wxLIST_AUTOSIZE;
+  data_.headers.push_back(header);
+
   header.title = "Time";
   header.format = wxLIST_FORMAT_CENTER;
   header.width = wxLIST_AUTOSIZE;
@@ -251,6 +261,16 @@ void ResultsPane::UpdateReportDataStopwatch(
 
     // adds sag
     value = result->catenary.Sag();
+    str = helper::DoubleToFormattedString(value, 2);
+    row.values.push_back(str);
+
+    // adds speed-wave
+    value = result->speed_wave;
+    str = helper::DoubleToFormattedString(value, 2);
+    row.values.push_back(str);
+
+    // adds length
+    value = result->catenary.Length();
     str = helper::DoubleToFormattedString(value, 2);
     row.values.push_back(str);
 
