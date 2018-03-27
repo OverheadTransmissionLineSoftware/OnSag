@@ -29,7 +29,7 @@
           </tension_point>
         </tensions>
         <correction_creep units="deg F">0.0</correction_creep>
-        <correction_sag units="in">0.0</correction_sag>
+        <correction_sag units="in">0.00</correction_sag>
         <scale>1.00</scale>
       </sag_cable>
       <sag_structure version="1" name="back">
