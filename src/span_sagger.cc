@@ -468,25 +468,14 @@ bool SpanSagger::UpdateCatenary() const {
   // adjusts temperature based on creep correction
   const double temperature = *temperature_ - cable_->correction_creep;
 
-  // searches tension point position that exceeds target temperature
-  auto iter = cable_->tensions.cbegin();
-  while (iter != cable_->tensions.cend()) {
-    const SagCable::TensionPoint& point = *iter;
-
-    if (temperature <= point.temperature) {
-      break;
-    } else {
-      iter++;
-    }
-  }
+  // gets min and max temp/tension point
+  const SagCable::TensionPoint& point_min = cable_->tensions.front();
+  const SagCable::TensionPoint& point_max = cable_->tensions.back();
 
   // determines if the tension point is valid
-  const unsigned int index = std::distance(cable_->tensions.cbegin(), iter);
-  if (index == 0) {
-    // first temperature exceeds the target
+  if (temperature < point_min.temperature) {
     return false;
-  } else if (index == cable_->tensions.size()) {
-    // no temperature exceeded the target
+  } else if (point_max.temperature < temperature) {
     return false;
   }
 
