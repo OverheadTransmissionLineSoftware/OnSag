@@ -544,6 +544,10 @@ void SagSpanEditorDialog::TransferCustomDataFromWindow() {
       ->GetValue() == true) {
     span_modified_.method.type = SagMethod::Type::kTransit;
   }
+
+  // transfers notes
+  textctrl = XRCCTRL(*this, "textctrl_notes", wxTextCtrl);
+  span_modified_.notes = textctrl->GetValue();
 }
 
 void SagSpanEditorDialog::TransferCustomDataToWindow() {
@@ -595,4 +599,8 @@ void SagSpanEditorDialog::TransferCustomDataToWindow() {
     button_radio = XRCCTRL(*this, "radiobutton_transit", wxRadioButton);
     button_radio->SetValue(true);
   }
+
+  // transfers notes
+  textctrl = XRCCTRL(*this, "textctrl_notes", wxTextCtrl);
+  textctrl->SetValue(span_modified_.notes);
 }
