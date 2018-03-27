@@ -79,23 +79,20 @@ bool SagCable::Validate(const bool& is_included_warnings,
     }
 
     // checks that temperature is increasing
-    if (point.temperature < point_prev->temperature) {
+    if (point.temperature <= point_prev->temperature) {
       is_valid = false;
       if (messages != nullptr) {
-        message.description = "Invalid tension point, temperature is"
-                              " decreasing";
+        message.description = "Invalid tension point, temperature is constant"
+                              " or decreasing";
         messages->push_back(message);
       }
     }
 
-    // checks that tension is decreasing
-    // this is logged as a warning, because an analysis can still be reached
-    if ((point.temperature < point_prev->temperature)
-        && (is_included_warnings == true)) {
+    // checks that tension is constant or decreasing
+    if (point_prev->tension_horizontal < point.tension_horizontal) {
       is_valid = false;
       if (messages != nullptr) {
-        message.description = "Invalid tension point, tension is"
-                              " increasing";
+        message.description = "Invalid tension point, tension is increasing.";
         messages->push_back(message);
       }
     }

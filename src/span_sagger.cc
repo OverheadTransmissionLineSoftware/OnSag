@@ -548,7 +548,8 @@ bool SpanSagger::UpdateCatenary() const {
     }
   }
 
-  return true;
+  // returns catenary status
+  return catenary_.Validate(false, nullptr);
 }
 
 bool SpanSagger::UpdatePointTarget() const {
