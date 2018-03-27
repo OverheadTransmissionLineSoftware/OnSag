@@ -496,11 +496,14 @@ bool SpanSagger::UpdateCatenary() const {
   }
 
   // interpolates to find the tension
-  const double tension_horizontal =
+  double tension_horizontal =
       TensionHorizontalPolynomialFitted(points, temperature);
   if (tension_horizontal == -999999) {
     return false;
   }
+
+  // applies scaling factor to tension
+  tension_horizontal = tension_horizontal * cable_->scale;
 
   // solves for the catenary spacing
   Vector3d spacing;
