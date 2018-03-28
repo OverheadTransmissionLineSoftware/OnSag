@@ -105,7 +105,7 @@ bool OnSagApp::OnInit() {
   // sets application info
   SetAppDisplayName("OnSag");
   SetAppName("OnSag");
-  version_ = "0.0.0";
+  version_ = "0.1.0";
 
   // creates a document manager and sets to single document interface
   manager_doc_ = new wxDocManager();
