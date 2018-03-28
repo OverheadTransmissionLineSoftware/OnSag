@@ -80,6 +80,11 @@ cd ..
 ```
 
 ### Windows
+Pull all wxWidgets submodules.
+```
+git submodule update --init
+```
+
 Configure the library build.
 * Copy `include/wx/msw/setup0.h` to `include/wx/msw/setup.h`
 * Modify `include/wx/msw/setup.h`. This is required so the application can load

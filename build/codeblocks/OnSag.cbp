@@ -5,7 +5,7 @@
 		<Option title="OnSag" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="Common Header Files/;Common Resource Files/;Common Resource Files/XPM/;Common Resource Files/XRC/;Common Source Files/;Header Files/;Resource Files/;Resource Files/XPM/;Resource Files/XRC/;Source Files/;Test/;" />
+		<Option virtualFolders="Common Header Files/;Common Resource Files/;Common Resource Files/XPM/;Common Resource Files/XRC/;Common Source Files/;Header Files/;Resource Files/;Resource Files/Help/;Resource Files/XPM/;Resource Files/XRC/;Source Files/;Test/;" />
 		<Build>
 			<Target title="debug">
 				<Option output="debug/OnSag" prefix_auto="1" extension_auto="1" />
@@ -26,6 +26,8 @@
 				</Linker>
 				<ExtraCommands>
 					<Add before="../../external/wxWidgets/build-debug/utils/wxrc/wxrc -v -c -o ../../res/resources.cc ../../external/AppCommon/res/xrc/error_message_dialog.xrc ../../res/xrc/edit_pane.xrc ../../res/xrc/on_sag_menubar.xrc ../../res/xrc/preferences_dialog.xrc ../../res/xrc/profile_plot_options_dialog.xrc ../../res/xrc/sag_span_editor_dialog.xrc" />
+					<Add after="mkdir -p debug/res" />
+					<Add after="cp ../../res/help/*.htb debug/res/" />
 				</ExtraCommands>
 			</Target>
 			<Target title="release">
@@ -48,6 +50,8 @@
 				</Linker>
 				<ExtraCommands>
 					<Add before="../../external/wxWidgets/build-release/utils/wxrc/wxrc -v -c -o ../../res/resources.cc ../../external/AppCommon/res/xrc/error_message_dialog.xrc ../../res/xrc/edit_pane.xrc ../../res/xrc/on_sag_menubar.xrc ../../res/xrc/preferences_dialog.xrc ../../res/xrc/profile_plot_options_dialog.xrc ../../res/xrc/sag_span_editor_dialog.xrc" />
+					<Add after="mkdir -p release/res" />
+					<Add after="cp ../../res/help/*.htb release/res/" />
 				</ExtraCommands>
 			</Target>
 		</Build>
@@ -267,6 +271,78 @@
 		</Unit>
 		<Unit filename="../../include/onsag/span_sagger.h">
 			<Option virtualFolder="Header Files/" />
+		</Unit>
+		<Unit filename="../../res/help/calculations/cable_modeling.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/calculations/calculations.hhc">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/calculations/calculations.hhk">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/calculations/calculations.hhp">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/calculations/dynamometer_sagging.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/calculations/stopwatch_sagging.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/calculations/transit_sagging.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/analyzing_a_span.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/application_files.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/editing_sag_spans.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/errors.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/interface.hhc">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/interface.hhk">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/interface.hhp">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/plot.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/printing.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/reports.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/interface/windows.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/overview/introduction.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/overview/license.html">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/overview/overview.hhc">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/overview/overview.hhk">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/overview/overview.hhp">
+			<Option virtualFolder="Resource Files/Help/" />
+		</Unit>
+		<Unit filename="../../res/help/overview/technical_support.html">
+			<Option virtualFolder="Resource Files/Help/" />
 		</Unit>
 		<Unit filename="../../res/icon.ico">
 			<Option virtualFolder="Resource Files/" />

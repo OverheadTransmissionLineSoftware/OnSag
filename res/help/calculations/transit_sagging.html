@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Transit Sagging</title>
+</head>
+<body>
+  <h1>2. Transit Sagging</h1>
+  <h3>2.1 Overview</h3>
+  <p>
+    Overhead cables can be sagged using a survey transit.
+  </p>
+  <p>
+    The transit must be positioned under the cable and have a line of sight
+    that intersects the catenary only once, as shown in the figure below.
+  </p>
+  <br />
+  <br />
+  <img src="transit_sagging.png" alt="" />
+  <p>
+    Due to the way catenary equations are defined, there isn't a direct way to
+    calculate the line of sight for a given transit position. Solving this
+    requires a certain amount of guess and check. When the solution is found,
+    two results will be provided:
+    <ul>
+      <li>
+        Angle (&#952): the transit line of sight angle, from horizontal.
+        Positive values indicate the angle is upward, while negative is
+        downward.
+      </li>
+      <li>
+        Target Position (t): the intersection of the transit line of sight and
+        the opposite structure. The reported value is the vertical distance from
+        the cable attachment to the center of the target.
+      </li>
+    </ul>
+  </p>
+  <h3>2.2 Control Factor</h3>
+  <p>
+    The control factor is the ratio of the sag at the survey point compared to
+    the maximum sag of the span.
+  </p>
+  <br />
+  <br />
+  <img src="equation_control_factor.png" alt="" />
+  <p>
+    If the surveyed point is at the maximum sag point, the control factor is
+    equal to 1.0. As the surveyed point moves away from the maximum sag point,
+    the value decreases. The control factor is important for transit sagging, as
+    it indicates how sensitive the surveyed point is to changes in tension.
+    Minimum control factor limits are established in the following figure so
+    that the surveyed point has to be toward the middle of the span to be valid.
+  </p>
+  <br />
+  <br />
+  <img src="control_factor.png" alt="" />
+</body>
+</html>

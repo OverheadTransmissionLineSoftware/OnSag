@@ -68,6 +68,11 @@ class OnSagFrame : public wxDocParentFrame {
   ///   The event.
   void OnMenuHelpAbout(wxCommandEvent& event);
 
+  /// \brief Handles the help->manual menu click event.
+  /// \param[in] event
+  ///   The event.
+  void OnMenuHelpManual(wxCommandEvent& event);
+
   /// \brief Handles the view->log menu click event.
   /// \param[in] event
   ///   The event.

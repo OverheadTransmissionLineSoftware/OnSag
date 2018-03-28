@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cable Modeling</title>
+</head>
+<body>
+  <h1>1. Cable Modeling</h1>
+  <h3>1.1 Catenary</h3>
+  <p>
+    A catenary is a curve that can be used to model the position and tension of
+    an overhead cable. It is defined by the following:
+    <ul>
+      <li>Horizontal tension (H)</li>
+      <li>Unit weight (w)</li>
+      <li>Horizontal spacing, from left end point to right end point (A)</li>
+      <li>Vertical spacing, from left end point to right end point (B)</li>
+    </ul>
+  </p>
+  <br />
+  <br />
+  <img src="catenary.png" alt="" />
+  <p>
+    The catenary tension changes along the curve. The lowpoint has the lowest
+    tension, and the tension increases moving toward either end. The horizontal
+    tension (H) is the tension at the lowpoint, while the support tensions are
+    at the catenary ends. The unit weight (w) is the weight per linear foot of
+    the cable. Together, the horizontal tension and the unit weight define the
+    shape of the curve (H/w). For a fixed spacing, a lower H/w will sag deeper
+    than a catenary with a higher H/w, as shown below.
+  </p>
+  <br />
+  <br />
+  <img src="catenary_constants.png" alt="" />
+  <h3>1.2 Temperature / Tension</h3>
+  <p>
+    Most overhead cables respond to temperature change. As the temperature
+    varies, the cable material will either contract or elongate. To account for
+    this, installation tensions are typically provided for a wide range of
+    temperatures.
+  </p>
+  <p>
+    The temperature-tension points will be curve fitted to fill in the gaps for
+    all temperatures within range. The curve needs to have a specific shape,
+    as shown below. When temperature increases, the tension should drop quickly
+    at first and then slowly taper off.
+  </p>
+  <br />
+  <br />
+  <img src="cable_temp_tension_curve.png" alt="" />
+  <h3>1.3 Creep Correction</h3>
+  <p>
+    The creep correction is a cable tension correction that accounts for
+    long-term permanent elongation of the cable. It adjusts the tension so that
+    the cable is installed tighter than the cable-tension points discussed
+    above. It is reported as a temperature, indicating that the cable should be
+    installed at a set number of degrees colder than the actual cable
+    temperature.
+  </p>
+  <br />
+  <br />
+  <img src="equation_creep_correction.png" alt="" />
+  <h3>1.4 Sag Correction</h3>
+  <p>
+    The sag correction is a cable tension correction that accounts for the cable
+    hanging differently in travelers compared to when it is clipped in. This is
+    caused by uneven spans and is most often seen in multi-span sag sections
+    where the cable runs downhill into the largest or lowest span.
+  </p>
+  <p>
+    The sag correction is added to the nominal sag of the catenary. Positive
+    sag corrections will increase the sag (and decrease the tension), while
+    negative sag corrections will have the opposite effect.
+  </p>
+  <br />
+  <br />
+  <img src="equation_sag_correction.png" alt="" />
+  <h3>1.5 Scale Factor</h3>
+  <p>
+    The scaling factor is a cable tension correction that allows pre-stressing
+    tensions to be calculated. This is factor usually is between 1.0 and 1.5,
+    depending on how long the cable will be pre-stressed.
+  </p>
+  <br />
+  <br />
+  <img src="equation_scale_factor.png" alt="" />
+</body>
+</html>

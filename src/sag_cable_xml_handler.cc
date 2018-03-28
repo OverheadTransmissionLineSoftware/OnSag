@@ -69,7 +69,7 @@ wxXmlNode* SagCableXmlHandler::CreateNode(
   // creates correction-sag node and adds to parent node
   title = "correction_sag";
   value = cable.correction_sag;
-  content = helper::DoubleToFormattedString(value, 1);
+  content = helper::DoubleToFormattedString(value, 2);
   if (units == units::UnitSystem::kMetric) {
     attribute = wxXmlAttribute("units", "cm");
   } else if (units == units::UnitSystem::kImperial) {

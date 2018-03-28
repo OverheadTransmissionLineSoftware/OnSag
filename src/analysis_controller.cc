@@ -69,6 +69,7 @@ void AnalysisThread::DoAnalysisJob(const int& index) {
   result.factor_control = -999999;
   result.offset_coordinates = Point2d<double>();
   result.point_target = Point2d<double>();
+  result.speed_wave = -999999;
   result.temperature_cable = nullptr;
   result.tension_dyno = -999999;
   result.time_stopwatch = -999999;
@@ -83,6 +84,7 @@ void AnalysisThread::DoAnalysisJob(const int& index) {
     if (sagger_.method()->type == SagMethod::Type::kDynamometer) {
       result.tension_dyno = sagger_.TensionDyno();
     } else if (sagger_.method()->type == SagMethod::Type::kStopWatch) {
+      result.speed_wave = sagger_.SpeedWave();
       result.time_stopwatch = sagger_.TimeStopwatch();
     } else if (sagger_.method()->type == SagMethod::Type::kTransit) {
       result.factor_control = sagger_.FactorControl();

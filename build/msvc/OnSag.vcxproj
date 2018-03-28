@@ -71,6 +71,10 @@
     <PreBuildEvent>
       <Command>..\..\external\wxWidgets\utils\wxrc\vc_mswud_x64\wxrc.exe -v -c -o=..\..\res\resources.cc ..\..\external\AppCommon\res\xrc\error_message_dialog.xrc ..\..\res\xrc\edit_pane.xrc ..\..\res\xrc\on_sag_menubar.xrc ..\..\res\xrc\profile_plot_options_dialog.xrc ..\..\res\xrc\preferences_dialog.xrc ..\..\res\xrc\sag_span_editor_dialog.xrc</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>MKDIR .\Debug\res
+XCOPY ..\..\res\help\*.htb .\Debug\res /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -95,6 +99,10 @@
     <PreBuildEvent>
       <Command>..\..\external\wxWidgets\utils\wxrc\vc_mswu_x64\wxrc.exe -v -c -o=..\..\res\resources.cc ..\..\external\AppCommon\res\xrc\error_message_dialog.xrc ..\..\res\xrc\edit_pane.xrc ..\..\res\xrc\on_sag_menubar.xrc ..\..\res\xrc\profile_plot_options_dialog.xrc ..\..\res\xrc\preferences_dialog.xrc ..\..\res\xrc\sag_span_editor_dialog.xrc</Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>MKDIR .\Release\res
+XCOPY ..\..\res\help\*.htb .\Release\res /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\external\AppCommon\include\appcommon\graphics\data_set_2d.h" />
@@ -150,6 +158,30 @@
     <None Include="..\..\external\AppCommon\res\xpm\sort_arrow_down.xpm" />
     <None Include="..\..\external\AppCommon\res\xpm\sort_arrow_up.xpm" />
     <None Include="..\..\external\AppCommon\res\xrc\error_message_dialog.xrc" />
+    <None Include="..\..\res\help\calculations\cable_modeling.html" />
+    <None Include="..\..\res\help\calculations\calculations.hhc" />
+    <None Include="..\..\res\help\calculations\calculations.hhk" />
+    <None Include="..\..\res\help\calculations\calculations.hhp" />
+    <None Include="..\..\res\help\calculations\dynamometer_sagging.html" />
+    <None Include="..\..\res\help\calculations\stopwatch_sagging.html" />
+    <None Include="..\..\res\help\calculations\transit_sagging.html" />
+    <None Include="..\..\res\help\interface\analyzing_a_span.html" />
+    <None Include="..\..\res\help\interface\application_files.html" />
+    <None Include="..\..\res\help\interface\editing_sag_spans.html" />
+    <None Include="..\..\res\help\interface\errors.html" />
+    <None Include="..\..\res\help\interface\interface.hhc" />
+    <None Include="..\..\res\help\interface\interface.hhk" />
+    <None Include="..\..\res\help\interface\interface.hhp" />
+    <None Include="..\..\res\help\interface\plot.html" />
+    <None Include="..\..\res\help\interface\printing.html" />
+    <None Include="..\..\res\help\interface\reports.html" />
+    <None Include="..\..\res\help\interface\windows.html" />
+    <None Include="..\..\res\help\overview\introduction.html" />
+    <None Include="..\..\res\help\overview\license.html" />
+    <None Include="..\..\res\help\overview\overview.hhc" />
+    <None Include="..\..\res\help\overview\overview.hhk" />
+    <None Include="..\..\res\help\overview\overview.hhp" />
+    <None Include="..\..\res\help\overview\technical_support.html" />
     <None Include="..\..\res\xpm\copy.xpm" />
     <None Include="..\..\res\xpm\icon.xpm" />
     <None Include="..\..\res\xpm\minus.xpm" />

@@ -48,6 +48,11 @@ struct SaggingAnalysisResult {
   ///   Applicable for all sagging methods.
   Point2d<double> offset_coordinates;
 
+  /// \var speed_wave
+  ///   The traveling wave speed. Only applicable for 'kStopwatch' sagging
+  ///   method.
+  double speed_wave;
+
   /// \var temperature_cable
   ///   The cable temperature. Applicable for all sagging methods.
   const double* temperature_cable;

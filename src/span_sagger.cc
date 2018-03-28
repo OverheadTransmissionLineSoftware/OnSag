@@ -136,6 +136,20 @@ Point2d<double> SpanSagger::PointTarget() const {
   }
 }
 
+double SpanSagger::SpeedWave() const {
+  // updates class if necessary
+  if ((IsUpdated() == false) && (Update() == false)) {
+    return -999999;
+  }
+
+  // returns valid answer if method type is correct
+  if (method_->type == SagMethod::Type::kStopWatch) {
+    return sagger_stopwatch_.VelocityWave();
+  } else {
+    return -999999;
+  }
+}
+
 double SpanSagger::TensionDyno() const {
   // updates class if necessary
   if ((IsUpdated() == false) && (Update() == false)) {
@@ -454,25 +468,14 @@ bool SpanSagger::UpdateCatenary() const {
   // adjusts temperature based on creep correction
   const double temperature = *temperature_ - cable_->correction_creep;
 
-  // searches tension point position that exceeds target temperature
-  auto iter = cable_->tensions.cbegin();
-  while (iter != cable_->tensions.cend()) {
-    const SagCable::TensionPoint& point = *iter;
-
-    if (temperature <= point.temperature) {
-      break;
-    } else {
-      iter++;
-    }
-  }
+  // gets min and max temp/tension point
+  const SagCable::TensionPoint& point_min = cable_->tensions.front();
+  const SagCable::TensionPoint& point_max = cable_->tensions.back();
 
   // determines if the tension point is valid
-  const unsigned int index = std::distance(cable_->tensions.cbegin(), iter);
-  if (index == 0) {
-    // first temperature exceeds the target
+  if (temperature < point_min.temperature) {
     return false;
-  } else if (index == cable_->tensions.size()) {
-    // no temperature exceeded the target
+  } else if (point_max.temperature < temperature) {
     return false;
   }
 
@@ -493,11 +496,14 @@ bool SpanSagger::UpdateCatenary() const {
   }
 
   // interpolates to find the tension
-  const double tension_horizontal =
+  double tension_horizontal =
       TensionHorizontalPolynomialFitted(points, temperature);
   if (tension_horizontal == -999999) {
     return false;
   }
+
+  // applies scaling factor to tension
+  tension_horizontal = tension_horizontal * cable_->scale;
 
   // solves for the catenary spacing
   Vector3d spacing;
@@ -534,7 +540,8 @@ bool SpanSagger::UpdateCatenary() const {
     }
   }
 
-  return true;
+  // returns catenary status
+  return catenary_.Validate(false, nullptr);
 }
 
 bool SpanSagger::UpdatePointTarget() const {

@@ -29,18 +29,18 @@
           </tension_point>
         </tensions>
         <correction_creep units="deg F">0.0</correction_creep>
-        <correction_sag units="in">0.0</correction_sag>
+        <correction_sag units="in">0.00</correction_sag>
         <scale>1.00</scale>
       </sag_cable>
       <sag_structure version="1" name="back">
         <name>1/1</name>
         <attachment>Center</attachment>
-        <point_2d version="1" name="position_attachment">0.00,100.00</point_2d>
+        <point_2d version="1" name="point_attachment">0.00,100.00</point_2d>
       </sag_structure>
       <sag_structure version="1" name="ahead">
         <name>1/2</name>
         <attachment>Center</attachment>
-        <point_2d version="1" name="position_attachment">1200.00,150.00</point_2d>
+        <point_2d version="1" name="point_attachment">1200.00,150.00</point_2d>
       </sag_structure>
       <sag_method version="1">
         <type>transit</type>
