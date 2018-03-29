@@ -59,7 +59,8 @@ BEGIN_EVENT_TABLE(OnSagFrame, wxDocParentFrame)
 END_EVENT_TABLE()
 
 OnSagFrame::OnSagFrame(wxDocManager* manager)
-    : wxDocParentFrame(manager, nullptr, wxID_ANY, "OnSag") {
+    : wxDocParentFrame(manager, nullptr, wxID_ANY,
+                       wxGetApp().GetAppDisplayName()) {
   // loads dialog from virtual xrc file system
   wxXmlResource::Get()->LoadMenuBar(this, "on_sag_menubar");
 
